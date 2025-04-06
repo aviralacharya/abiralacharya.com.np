@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
-
 <head>
-  <meta charset="UTF-8" />
-  <title>Abiral Acharya | SEO Person in Jhapa, Nepal</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8719236609788400"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Abiral Acharya | SEO Specialist & Web Developer in Jhapa, Nepal</title>
+  <meta name="description" content="Professional SEO specialist and web developer based in Jhapa, Nepal. Offering SEO services, web development, and digital marketing solutions. SEO analyst at bcapoint.com, BCA association - MMC Former Secretary ">
+  <meta name="keywords" content="SEO Nepal, Web Developer Jhapa, Digital Marketing Nepal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Abiral Acharya">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <!-- Move to up button -->
   <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    <a href="#home" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></a>
   </div>
+  
   <!-- navigation menu -->
   <nav>
     <div class="navbar">
-      <div class="logo"><a href="#">ABIRAL</a></div>
+      <div class="logo"><a href="#" aria-label="Home">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -29,19 +30,18 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
         <div class="cancel-btn">
-          <i class="fas fa-times"></i>
+          <i class="fas fa-times" aria-label="Close menu"></i>
         </div>
       </ul>
       <div class="media-icons">
-        <a href="https://www.facebook.com/abiralacharya2003" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://x.com/abiralacharya80"target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/abiralacharya2003/"target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        
+        <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="menu-btn">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars" aria-label="Open menu"></i>
     </div>
   </nav>
 
@@ -53,10 +53,16 @@
         <div class="text-two">I'm Abiral Acharya</div>
         <div class="text-three">Search Engine Optimizer</div>
         <div class="text-four">From Nepal</div>
+        <div class="button">
+          <button><a href="#contact">Hire Me</a></button>
+          
+        </div>
+        
       </div>
-      <div class="button">
-        <button><a href="#contact">Hire Me</a></button>
+      <div class="home-image">
+        <img src="about.png" alt="Abiral Acharya |  Specialist & Web Developer in Jhapa, Nepal" loading="lazy">
       </div>
+      
     </div>
   </section>
 
@@ -66,14 +72,19 @@
       <div class="title"><span>About Me</span></div>
       <div class="about-details">
         <div class="left">
-          <img src="about.png" alt="" />
+          <img src="about.png" alt="Abiral Acharya portrait, SEO Specialist & Web Developer in Jhapa, Nepal" loading="lazy">
         </div>
         <div class="right">
           <div class="topic">I Love Optimizing</div>
           <p>
-            I am a dedicated Search Engine Optimizer (SEO) with a strong passion for enhancing online visibility and driving organic traffic. With expertise in keyword research, technical SEO, on-page and off-page optimization, and content strategy, I help websites rank higher in search engine results. I stay updated with the latest search algorithms and industry trends to implement effective SEO strategies that boost engagement and conversions. My goal is to create data-driven, result-oriented SEO campaigns that improve website performance and ensure long-term success in the digital landscape.</p>
+            I am a dedicated Search Engine Optimizer (SEO) with a strong passion for enhancing online visibility and driving organic traffic. 
+            With expertise in keyword research, technical SEO, on-page and off-page optimization, and content strategy, I help websites rank higher 
+            in search engine results. I stay updated with the latest search algorithms and industry trends to implement effective SEO strategies that 
+            boost engagement and conversions. My goal is to create data-driven, result-oriented SEO campaigns that improve website performance and ensure
+             long-term success in the digital landscape.
+          </p>
           <div class="button">
-            <button>Download CV</button>
+            <button onclick="window.open('Abiral-Acharya-cv.pdf')">Download CV</button>
           </div>
         </div>
       </div>
@@ -81,23 +92,17 @@
   </section>
 
   <!-- My Skill Section Start -->
-  <!-- Section Tag and Other Div will same where we need to put same CSS -->
   <section class="skills" id="skills">
     <div class="content">
       <div class="title"><span>My Skills</span></div>
       <div class="skills-details">
         <div class="text">
           <div class="topic">Skills Reflects Our Knowledge</div>
-          <p>Over the past year, I have focused on developing strong skills in web development and digital marketing. 
-            From creating responsive and dynamic websites to improving their visibility on search engines, my experience 
-            reflects practical knowledge and a clear understanding of modern web technologies. Every project I work on is 
-            supported by a solid foundation in both frontend and backend development, along with effective SEO techniques to
-             deliver impactful and result-driven solutions.</p>
-        
+          <p>Over the past year, I have focused on developing strong skills in web development and digital marketing. From creating responsive and dynamic websites to improving their visibility on search engines, my experience reflects practical knowledge and a clear understanding of modern web technologies. Every project I work on is supported by a solid foundation in both frontend and backend development, along with effective SEO techniques to deliver impactful and result-driven solutions.</p>
           <div class="experience">
             <div class="num">1</div>
             <div class="exp">
-              Years Of <br />
+              Years Of <br>
               Experience
             </div>
           </div>
@@ -106,16 +111,18 @@
           <div class="box">
             <div class="topic">Frontend Development</div>
             <div class="per">75%</div>
+            <div class="progress-bar" style="--percentage: 75"></div>
           </div>
           <div class="box">
             <div class="topic">Backend Development</div>
             <div class="per">60%</div>
+            <div class="progress-bar" style="--percentage: 60"></div>
           </div>
           <div class="box">
             <div class="topic">Search Engine Optimization</div>
             <div class="per">85%</div>
+            <div class="progress-bar" style="--percentage: 85"></div>
           </div>
-          
         </div>
       </div>
     </div>
@@ -130,49 +137,43 @@
           <div class="icon">
             <i class="fas fa-desktop"></i>
           </div>
-          <div class="topic">Web Devlopment</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
-            eligendi?</p>
+          <div class="topic">Web Development</div>
+          <p>Custom website development tailored to your business needs, built with modern technologies for optimal performance and user experience.</p>
         </div>
         <div class="box">
           <div class="icon">
-            <i class="fas fa-paint-brush"></i>
+            <i class="fas fa-search"></i>
           </div>
-          <div class="topic">Graphic Design</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
-            eligendi?</p>
+          <div class="topic">SEO Services</div>
+          <p>Comprehensive SEO strategies including keyword research, on-page optimization, technical SEO, and content strategy to boost your rankings.</p>
         </div>
         <div class="box">
           <div class="icon">
             <i class="fas fa-chart-line"></i>
           </div>
           <div class="topic">Digital Marketing</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
-            eligendi?</p>
+          <p>Data-driven digital marketing campaigns to increase your online presence, drive traffic, and convert visitors into customers.</p>
         </div>
         <div class="box">
           <div class="icon">
-            <i class="fab fa-android"></i>
+            <i class="fas fa-mobile-alt"></i>
           </div>
-          <div class="topic">Icon Design</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
-            eligendi?</p>
+          <div class="topic">Responsive Design</div>
+          <p>Mobile-friendly website designs that look great and function perfectly on all devices and screen sizes.</p>
         </div>
         <div class="box">
           <div class="icon">
-            <i class="fas fa-camera-retro"></i>
+            <i class="fas fa-tachometer-alt"></i>
           </div>
-          <div class="topic">Photography</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
-            eligendi?</p>
+          <div class="topic">Performance Optimization</div>
+          <p>Website speed optimization to improve loading times, user experience, and search engine rankings.</p>
         </div>
         <div class="box">
           <div class="icon">
-            <i class="fas fa-tablet-alt"></i>
+            <i class="fas fa-analytics"></i>
           </div>
-          <div class="topic">Apps Devlopment</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem
-            eligendi?</p>
+          <div class="topic">Analytics & Reporting</div>
+          <p>Detailed analytics setup and regular reporting to track your website's performance and marketing ROI.</p>
         </div>
       </div>
     </div>
@@ -184,10 +185,21 @@
       <div class="title"><span>Contact Me</span></div>
       <div class="text">
         <div class="topic">Have Any Project?</div>
-<p>Looking to build a professional website or improve your online presence through effective SEO strategies? I specialize in creating responsive, user-friendly websites that not only look great but also rank well on search engines. Whether you're a small business owner, startup, or blogger, I can help you craft a powerful digital presence that drives traffic and converts visitors. Let's work together to bring your web development ideas to life and boost your visibility online. Get in touch today — your next project deserves the best!</p>
-
+        <p>Looking to build a professional website or improve your online presence through effective SEO strategies? I specialize in creating responsive, user-friendly websites that not only look great but also rank well on search engines. Whether you're a small business owner, startup, or blogger, I can help you craft a powerful digital presence that drives traffic and converts visitors.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Email: abiral@example.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>Phone: +977-9824055745</span>
+          </div>
+        </div>
+        
         <div class="button">
-          <button><a href="https://wa.me/9824055745" target="_blank">Let's Chat</a></button>
+          <button><a href="https://wa.me/9779824055745" target="_blank" rel="noopener noreferrer">Let's Chat</a></button>
         </div>
       </div>
     </div>
@@ -196,11 +208,10 @@
   <!-- Footer Section Start -->
   <footer>
     <div class="text">
-      <span>By<a href="#">Abiral Acharya</a> | &#169; 2025 All Rights Reserved</span>
+      <span>© <span id="current-year"></span> <a href="#">Abiral Acharya</a> | All Rights Reserved</span>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

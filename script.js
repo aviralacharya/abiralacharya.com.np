@@ -101,3 +101,7 @@ document.addEventListener('keyup', function(e) {
 document.addEventListener('mousedown', function() {
   document.documentElement.classList.remove('keyboard-nav');
 });
+
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});

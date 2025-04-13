@@ -1,0 +1,24 @@
+{
+  "name": "Abiral Acharya | SEO Specialist & Web Developer",
+  "short_name": "Abiral Acharya",
+  "description": "Personal portfolio of Abiral Acharya, SEO specialist, web developer,BCA Association MMC-Secretary and founder of BCAPoint.com from Birtamode, Jhapa, Nepal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d0d0d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Abiral-Acharya-SEO-Person-Birtamode.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/about.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en"
+}

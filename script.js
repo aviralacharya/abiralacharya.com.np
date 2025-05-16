@@ -2,7 +2,7 @@
 let nav = document.querySelector("nav");
 let scrollBtn = document.querySelector(".scroll-button a");
 
-// Show/hide sticky navigation and scroll button
+// Show/hide sticky navigation/ scroll button
 window.onscroll = function() {
   if(document.documentElement.scrollTop > 20) {
     nav.classList.add("sticky");

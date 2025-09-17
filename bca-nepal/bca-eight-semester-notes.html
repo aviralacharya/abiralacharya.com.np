@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free BCA Eight Semester Notes for Tribhuvan University (TU) students. Download Programming in C, Digital Logic, Mathematics I, Financial Accounting notes by Aviral Acharya - SEO expert in Nepal.">
+    <meta name="keywords" content="bca notes, bca notes tu, aviral acharya, aviral acharya seo, bca Eight semester notes, programming in c notes, digital logic notes, financial accounting notes, mathematics i notes, bca notes nepal">
+    <meta name="author" content="Aviral Acharya">
+    <title>Eight Semester BCA Notes TU - BCA Notes Nepal | Aviral Acharya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 70px; /* Account for fixed header */
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #1a2530);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: #4CAF50;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4CAF50;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #1a2530);
+            padding: 5rem 2rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 999;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+        }
+        
+        .mobile-nav.show {
+            right: 0;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+        }
+        
+        .mobile-nav ul li {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mobile-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+        
+        .mobile-nav ul li a:hover {
+            color: #4CAF50;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: #e9ecef;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb-content {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-content a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-content a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        /* PDF Previews Section - One per row */
+        .pdf-previews {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .pdf-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pdf-header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .pdf-preview-container {
+            height: 500px;
+            background: #f1f3f4;
+            overflow: hidden;
+        }
+        
+        .pdf-preview-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .pdf-info {
+            padding: 1.5rem;
+        }
+        
+        .pdf-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .pdf-info p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .pdf-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 0.8rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .download-btn:hover {
+            background: #2980b9;
+        }
+        
+        /* Resources Section */
+        .resources-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .resource-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #3498db;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #3498db;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .logo h1 {
+                font-size: 1.1rem;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-header {
+                padding: 2rem 0;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .pdf-preview-container {
+                height: 300px;
+            }
+            
+            .pdf-info h3 {
+                font-size: 1.3rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .breadcrumb-content {
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 1rem;
+            }
+            
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .pdf-preview-container {
+                height: 250px;
+            }
+            
+            .pdf-info {
+                padding: 1rem;
+            }
+            
+            .pdf-info h3 {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .resource-card {
+                padding: 1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap fa-2x"></i>
+                <h1>BCA Notes Nepal | Aviral Acharya</h1>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="/bca-nepal/bca-notes.html">Home</a></li>
+                    <li><a href="#">Notes</a></li>
+                    <li><a href="/index.html#contact">Syllabus</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="/bca-nepal/bca-notes.html">Home</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="/index.html#contact">Syllabus</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Eight Semester BCA Notes - Tribhuvan University</h1>
+            <p>Complete study materials for all subjects of BCA Eight Semester TU. Download notes, question banks, and previous year papers by Aviral Acharya.</p>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container breadcrumb-content">
+            
+            <a href="/bca-nepal/bca-notes.html">BCA Notes</a>
+            <span>/</span>
+            <span>Eight Semester TU</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- PDF Previews Section - One per row -->
+        <h2 class="section-title">Eight Semester BCA Notes - TU</h2>
+        <div class="pdf-previews">
+            <!-- PDF 1 - Programming in C -->
+            <div class="pdf-card">
+                <div class="pdf-header">
+                    <h3>Programming in C - Complete Notes</h3>
+                </div>
+                <div class="pdf-preview-container">
+                    <!-- Replace FILE_ID with your actual Google Drive file ID -->
+                    <iframe src="https://drive.google.com/file/d/1cFq_jTf-2h_5w4j4K4X7K8W9L7M6N5P/preview" 
+                            allow="autoplay"></iframe>
+                </div>
+                <div class="pdf-info">
+                    <p>Complete notes covering all topics of C programming including data types, control structures, functions, arrays, and pointers. Perfect for exam preparation for Tribhuvan University BCA students.</p>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Notes</a>
+                    <div class="pdf-meta">
+                        <span><i class="far fa-file-alt"></i> 2.4 MB</span>
+                        <span><i class="far fa-calendar-alt"></i> Updated: Oct 15, 2023</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF 2 - Digital Logic -->
+            <div class="pdf-card">
+                <div class="pdf-header">
+                    <h3>Digital Logic - Theory & Problems</h3>
+                </div>
+                <div class="pdf-preview-container">
+                    <!-- Replace FILE_ID with your actual Google Drive file ID -->
+                    <iframe src="https://drive.google.com/file/d/1dGr_kUg-3i_6x5k5L5Y8X9M8N7O6Q/preview" 
+                            allow="autoplay"></iframe>
+                </div>
+                <div class="pdf-info">
+                    <p>Comprehensive notes on digital logic concepts including number systems, boolean algebra, logic gates, and combinational circuits with solved examples for TU BCA Eight semester.</p>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Notes</a>
+                    <div class="pdf-meta">
+                        <span><i class="far fa-file-alt"></i> 1.8 MB</span>
+                        <span><i class="far fa-calendar-alt"></i> Updated: Oct 10, 2023</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF 3 - Mathematics I -->
+            <div class="pdf-card">
+                <div class="pdf-header">
+                    <h3>Mathematics I - Formula Handbook</h3>
+                </div>
+                <div class="pdf-preview-container">
+                    <!-- Replace FILE_ID with your actual Google Drive file ID -->
+                    <iframe src="https://drive.google.com/file/d/1eHs_lVh-4j_7y6l6M6Z9Y0N9P8R7S/preview" 
+                            allow="autoplay"></iframe>
+                </div>
+                <div class="pdf-info">
+                    <p>Complete formula book with theorems, proofs, and examples for Mathematics I. Covers sets, matrices, limits, derivatives, and integration for BCA TU Eight semester.</p>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Notes</a>
+                    <div class="pdf-meta">
+                        <span><i class="far fa-file-alt"></i> 3.1 MB</span>
+                        <span><i class="far fa-calendar-alt"></i> Updated: Oct 5, 2023</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF 4 - Financial Accounting -->
+            <div class="pdf-card">
+                <div class="pdf-header">
+                    <h3>Financial Accounting - Concepts & Practices</h3>
+                </div>
+                <div class="pdf-preview-container">
+                    <iframe src="https://drive.google.com/file/d/1rJ2i-Adnzp9TPfPCvgwiyDOGzJiVoqz2/preview"
+                            width="100%" height="400" 
+                            allow="autoplay"></iframe>
+                </div>
+                <div class="pdf-info">
+                    <p>Detailed notes on financial accounting principles, journal entries, ledger accounts, trial balance, and financial statements preparation for BCA TU Eight semester.</p>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Notes</a>
+                    <div class="pdf-meta">
+                        <span><i class="far fa-file-alt"></i> 2.2 MB</span>
+                        <span><i class="far fa-calendar-alt"></i> Updated: Oct 3, 2023</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF 5 - Question Bank -->
+            <div class="pdf-card">
+                <div class="pdf-header">
+                    <h3>Eight Semester - Complete Question Bank</h3>
+                </div>
+                <div class="pdf-preview-container">
+                    <!-- Replace FILE_ID with your actual Google Drive file ID -->
+                    <iframe src="https://drive.google.com/file/d/1gJu_nXi-6l_9a8n8O8B1A2P1R9U9V/preview" 
+                            allow="autoplay"></iframe>
+                </div>
+                <div class="pdf-info">
+                    <p>Comprehensive question bank with previous year exam questions, important problems, and model answers for all Eight semester subjects of TU BCA.</p>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Notes</a>
+                    <div class="pdf-meta">
+                        <span><i class="far fa-file-alt"></i> 3.5 MB</span>
+                        <span><i class="far fa-calendar-alt"></i> Updated: Sept 28, 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Resources -->
+        <div class="resources-section">
+            <h2 class="section-title">Additional Resources for BCA Students</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Textbooks</h3>
+                    <p>Recommended textbooks for Eight semester</p>
+                    <a href="#" class="download-btn">View List</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Previous Papers</h3>
+                    <p>Last 5 years question papers</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Lectures</h3>
+                    <p>Topic-wise video explanations</p>
+                    <a href="#" class="download-btn">Watch Now</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Practical Files</h3>
+                    <p>Lab exercises and solutions</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BCA Notes Nepal | Aviral Acharya</h3>
+                    <p>Providing quality study materials for BCA students since 2020. Our mission is to make education accessible to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#">Notes</a></li>
+                        <li><a href="/index.html#contact">Syllabus</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Popular Subjects</h3>
+                    <ul>
+                        <li><a href="#">Programming in C</a></li>
+                        <li><a href="#">Data Structures</a></li>
+                        <li><a href="#">Database Management</a></li>
+                        <li><a href="#">Web Technology</a></li>
+                        <li><a href="#">Java Programming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Birtamode, Jhapa, Nepal</li>
+                        <li><i class="fas fa-phone"></i> +977 9824055745</li>
+                        <li><i class="fas fa-envelope"></i> contact@aviralacharya.com.np</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BCA Notes Nepal | Aviral Acharya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const closeBtn = document.querySelector('.close-menu');
+            const mobileNav = document.getElementById('mobile-nav');
+            const overlay = document.getElementById('overlay');
+            
+            function openMenu() {
+                mobileNav.classList.add('show');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMenu() {
+                mobileNav.classList.remove('show');
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+            
+            menuBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+            
+            // Close menu when clicking on links
+            const navLinks = document.querySelectorAll('.mobile-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+            
+            // Adjust for window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

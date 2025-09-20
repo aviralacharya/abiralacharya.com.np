@@ -386,7 +386,54 @@
 }
 </script>
 
+<script>
+(function attachAntiInspect() {
+  const isEditable = (el) => {
+    if (!el) return false;
+    const tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || el.isContentEditable;
+  };
 
+  function blockContext(e) {
+    if (isEditable(e.target)) return; 
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+
+
+  document.addEventListener('contextmenu', blockContext, true);
+
+  
+  document.addEventListener('mousedown', function(e) {
+    if (isEditable(e.target)) return;
+    if (e.button === 2) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }, true);
+
+
+  document.addEventListener('keydown', function(e) {
+    const key = (e.key || '').toLowerCase();
+    const ctrlOrCmd = e.ctrlKey || e.metaKey; 
+    if (e.keyCode === 123) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }
+
+    if (ctrlOrCmd && e.shiftKey && (key === 'i' || key === 'j' || key === 'c' || key === 'k')) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }
+
+    if (ctrlOrCmd && (key === 'u' || key === 's')) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }
+  }, true);
+
+  try { document.body && document.body.setAttribute('oncontextmenu', 'return false;'); } catch (err) { /* ignore */ }
+})();
+</script>
     
   <script src="script.js">
 

@@ -303,57 +303,12 @@
         </div>
     </footer>
     <script src="bca-notes-script.js"></script>
-    <script>
-(function attachAntiInspect() {
-  const isEditable = (el) => {
-    if (!el) return false;
-    const tag = el.tagName;
-    return tag === 'INPUT' || tag === 'TEXTAREA' || el.isContentEditable;
-  };
-
-  function blockContext(e) {
-    if (isEditable(e.target)) return; 
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  }
-
-
-  document.addEventListener('contextmenu', blockContext, true);
-
-  
-  document.addEventListener('mousedown', function(e) {
-    if (isEditable(e.target)) return;
-    if (e.button === 2) {
-      e.preventDefault();
-      e.stopPropagation();
-      return false;
-    }
-  }, true);
-
-
-  document.addEventListener('keydown', function(e) {
-    const key = (e.key || '').toLowerCase();
-    const ctrlOrCmd = e.ctrlKey || e.metaKey; 
-    if (e.keyCode === 123) {
-      e.preventDefault(); e.stopPropagation(); return false;
-    }
-
-    if (ctrlOrCmd && e.shiftKey && (key === 'i' || key === 'j' || key === 'c' || key === 'k')) {
-      e.preventDefault(); e.stopPropagation(); return false;
-    }
-
-    if (ctrlOrCmd && (key === 'u' || key === 's')) {
-      e.preventDefault(); e.stopPropagation(); return false;
-    }
-  }, true);
-
-  try { document.body && document.body.setAttribute('oncontextmenu', 'return false;'); } catch (err) { /* ignore */ }
-})();
-</script>
 <script>
-function checkAdBlock() {
-    return new Promise(resolve => {
+async function checkAdBlock() {
+    return new Promise(async (resolve) => {
+        let detected = false;
+
+        // 1. Classic bait element test
         let bait = document.createElement('div');
         bait.className = 'adsbox';
         bait.style.height = '1px';
@@ -362,15 +317,39 @@ function checkAdBlock() {
         bait.style.left = '-9999px';
         document.body.appendChild(bait);
 
-        setTimeout(function() {
-            let detected = (getComputedStyle(bait).display === 'none' || bait.offsetParent === null);
-            document.body.removeChild(bait);
-            resolve(detected);
-        }, 100);
+        if (getComputedStyle(bait).display === 'none' || bait.offsetParent === null) {
+            detected = true;
+        }
+        document.body.removeChild(bait);
+
+        // 2. Fake script test (Brave, Safari)
+        await new Promise((done) => {
+            let testScript = document.createElement("script");
+            testScript.src = "/ads.js"; // must exist on server (even empty)
+            testScript.onerror = function() {
+                detected = true;
+                done();
+            };
+            testScript.onload = function() {
+                done();
+            };
+            document.body.appendChild(testScript);
+            setTimeout(done, 500); // fallback timeout
+        });
+
+        // 3. Fetch request test (Safari iOS/macOS + global fallback)
+        try {
+            let response = await fetch("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {method:"HEAD", mode:"no-cors"});
+            // If blocked, fetch will throw an error
+        } catch (e) {
+            detected = true;
+        }
+
+        resolve(detected);
     });
 }
 
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function() {
     let modal = document.getElementById('adblock-modal');
     let button = document.getElementById('adblock-check-btn');
 
@@ -391,10 +370,11 @@ document.addEventListener("DOMContentLoaded", async function() {
     // Button lets user re-check
     button.addEventListener('click', runCheck);
 
-    // Optional: keep checking every 5s in case AdBlock is toggled
+    // Periodic check (every 5s)
     setInterval(runCheck, 5000);
 });
 </script>
+
 
 
 </body>

@@ -11,6 +11,22 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8719236609788400" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://aviralacharya.com.np/bca-nepal/bca-first-semester-notes.html" />
 
+    <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aviralacharya.com.np/">
+  <meta property="og:title" content="Abiral Acharya | SEO Specialist, Web Developer, Founder of BCAPoint.com and BCA Association Mechi Multiple Campus-Secretary(2080/81) in Birtamode Jhapa, Nepal">
+  <meta property="og:description" content="SEO expert in Nepal | Abiral Acharya | SEO expert from Jhapa, Professional SEO specialist, BCA Association Mechi Multiple Campus-Secretary(2080/81), web developer, and founder of BCAPoint.com based in Birtamode Jhapa, Nepal. Offering SEO services, web development, and digital marketing solutions.">
+  <meta property="og:image" content="https://aviralacharya.com.np/bca-nepal/bca-first-semester-notes.png">
+  <meta property="og:site_name" content="SEO expert in Nepal | Abiral Acharya | SEO expert from Jhapa">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aviralacharya.com.np/">
+  <meta name="twitter:title" content="Abiral Acharya | SEO Specialist, Web Developer & Founder of BCAPoint.com, BCA Association Mechi Multiple Campus-Secretary(2080/81) from Birtamode Jhapa, Nepal">
+  <meta name="twitter:description" content="SEO expert in Nepal | Abiral Acharya | SEO expert from Jhapa, Professional SEO specialist, web developer, BCA Association Mechi Multiple Campus-Secretary(2080/81) and founder of BCAPoint.com based in Birtamode Jhapa, Nepal. Offering SEO services, web development, and digital marketing solutions.">
+  <meta name="twitter:image" content="https://aviralacharya.com.np/bca-nepal/bca-first-semester-notes.png">
+  <meta name="twitter:creator" content="@abiralacharya80">
+
+  <link rel="manifest" href="/site.webmanifest">
      <link rel="stylesheet" href="notes-style.css">
 </head>
 <body>
@@ -271,6 +287,53 @@
         </div>
     </footer>
     <script src="bca-notes-script.js"></script>
- 
+    <script>
+(function attachAntiInspect() {
+  const isEditable = (el) => {
+    if (!el) return false;
+    const tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || el.isContentEditable;
+  };
+
+  function blockContext(e) {
+    if (isEditable(e.target)) return; 
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+
+
+  document.addEventListener('contextmenu', blockContext, true);
+
+  
+  document.addEventListener('mousedown', function(e) {
+    if (isEditable(e.target)) return;
+    if (e.button === 2) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }, true);
+
+
+  document.addEventListener('keydown', function(e) {
+    const key = (e.key || '').toLowerCase();
+    const ctrlOrCmd = e.ctrlKey || e.metaKey; 
+    if (e.keyCode === 123) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }
+
+    if (ctrlOrCmd && e.shiftKey && (key === 'i' || key === 'j' || key === 'c' || key === 'k')) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }
+
+    if (ctrlOrCmd && (key === 'u' || key === 's')) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }
+  }, true);
+
+  try { document.body && document.body.setAttribute('oncontextmenu', 'return false;'); } catch (err) { /* ignore */ }
+})();
+</script>
 </body>
 </html>

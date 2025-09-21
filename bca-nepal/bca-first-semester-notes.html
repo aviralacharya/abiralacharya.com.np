@@ -34,6 +34,10 @@
      <link rel="stylesheet" href="notes-style.css">
 </head>
 <body>
+    <div id="adblock-message" style="display:none; position:fixed; top:0; left:0; width:100%; background:red; color:white; text-align:center; padding:10px; z-index:9999;">
+    Please disable your ad blocker to support this website.
+</div>
+
     <!-- Header with Navbar -->
     <header>
         <div class="container header-container">
@@ -339,5 +343,26 @@
   try { document.body && document.body.setAttribute('oncontextmenu', 'return false;'); } catch (err) { /* ignore */ }
 })();
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Create a bait ad element
+    var bait = document.createElement('div');
+    bait.className = 'adsbox';
+    bait.style.height = '1px';
+    bait.style.width = '1px';
+    bait.style.position = 'absolute';
+    bait.style.left = '-9999px';
+    document.body.appendChild(bait);
+
+    window.setTimeout(function() {
+      if (getComputedStyle(bait).display === 'none' || bait.offsetParent === null) {
+        // AdBlock detected
+        document.getElementById('adblock-message').style.display = 'block';
+      }
+      document.body.removeChild(bait);
+    }, 100);
+  });
+</script>
+
 </body>
 </html>

@@ -65,7 +65,28 @@
   });
 </script>
 
-  <link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home .text {
+    max-width: 700px;
+    padding: 20px;
+  }
+</style>
+
+<link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+
 </head>
 
 <body>
@@ -635,7 +656,7 @@ With expertise in technical SEO, local SEO, keyword research, on-page and off-pa
 }
 </script>
 
-<script>
+<!-- <script>
 (function attachAntiInspect() {
   const isEditable = (el) => {
     if (!el) return false;
@@ -682,7 +703,7 @@ With expertise in technical SEO, local SEO, keyword research, on-page and off-pa
 
   try { document.body && document.body.setAttribute('oncontextmenu', 'return false;'); } catch (err) { /* ignore */ }
 })();
-</script>
+</script> -->
     
   <script src="script.js">
 

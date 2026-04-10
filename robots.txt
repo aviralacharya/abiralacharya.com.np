@@ -1,4 +1,17 @@
+# Allow all standard web crawlers (Includes Bing/Copilot)
 User-agent: *
+Allow: /
 Disallow: /feed/
 
+# Explicitly welcoming AI for training and real-time citation
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: CCBot
+User-agent: Applebot-Extended
+Allow: /
+
+# Link to your sitemap
 Sitemap: https://aviralacharya.com.np/sitemap.xml

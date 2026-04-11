@@ -1,7 +1,7 @@
 {
-  "name": "SEO Expert in Nepal | Abiral Acharya | SEO Specialist & Web Developer",
+  "name": "SEO Consultant in Nepal | SEO Expert in Jhapa | Abiral Acharya",
   "short_name": "Abiral Acharya",
-  "description": "Personal portfolio of Abiral Acharya, SEO specialist, web developer,BCA Association MMC-Secretary and founder of BCAPoint.com from Birtamode, Jhapa, Nepal.",
+  "description": "Abiral Acharya is an SEO consultant from Birtamode, Jhapa. He has 3 years of experince on the field of Local SEO, Technical SEO, On Page SEO, Sementic content writing and Digital marketing. He had done the projects of E commerce sites, SaaS sites, Tours and Travels where he implemented the best practice of 2026 which would help in increasement of the website organically over the search engines like Google, Bing etc. Not only on the traditional search engines but also have helped on the Llms citation of the website, which is the one of the major factor while doing SEO, GEO, AEO. Abiral Acharya would help you increase your business locally and internationally. ",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,14 +10,14 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/Abiral-Acharya-SEO-Person-Birtamode.ico",
+      "src": "/Abiral-Acharya-SEO-expert-Birtamode.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "/about.png",
+      "src": "/abiral-acharya-seo-expert-nepal.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ],
   "lang": "en"

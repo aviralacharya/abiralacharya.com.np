@@ -6,9 +6,24 @@
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://aviralacharya.com.np/about/</loc>
+    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/services/</loc>
+    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://aviralacharya.com.np/blogs/</loc>
     <lastmod>2026-04-10T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/contact/</loc>
+    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://aviralacharya.com.np/blogs/complete-seo-guide-nepal-businesses/</loc>
@@ -16,8 +31,33 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://aviralacharya.com.np/seo-expert-nepal-abiral-acharya.pdf</loc>
-    <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+    <loc>https://aviralacharya.com.np/blogs/darumandu-nepal-night-liquor-delivery-case-study/</loc>
+    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/blogs/free-seo-optimization-tools/</loc>
+    <lastmod>2026-04-11T00:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/blogs/keyword-research-nepal-find-low-competition/</loc>
+    <lastmod>2026-04-12T00:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/blogs/on-page-seo-guide-2026/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/blogs/optimize-local-seo-nepal-google-business-profile/</loc>
+    <lastmod>2026-04-11T00:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://aviralacharya.com.np/blogs/technical-seo-audit-20-checklist/</loc>
+    <lastmod>2026-04-11T00:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 </urlset>

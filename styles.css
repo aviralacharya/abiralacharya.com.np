@@ -138,7 +138,7 @@
       position: relative;
       height: 100vh;
       width: 100%;
-      background: url("Abiral-Acharya-seo-expert-jhapa.webp") no-repeat center center/cover;
+      background: url("assets/person/Abiral-Acharya-seo-expert-jhapa.webp") no-repeat center center/cover;
 
       font-family: 'Ubuntu', sans-serif;
       display: flex;
@@ -268,6 +268,47 @@
       transform: translateX(-50%);
     }
 
+    /* Clients Section */
+    .clients {
+      background: #fff;
+    }
+    .clients .client-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .clients .logo-box {
+      width: 150px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      padding: 10px;
+    }
+    .clients .logo-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(64, 112, 244, 0.15);
+    }
+    .clients .logo-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+      opacity: 0.7;
+    }
+    .clients .logo-box:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
     /* About Section */
     .about .about-details {
       display: flex;
@@ -365,46 +406,87 @@
       font-size: 16px;
       font-weight: 500;
     }
-    .skills-details .boxes {
+    .skills-details .skill-cards {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
     }
-    .skills-details .box {
-      width: 100%;
-      margin: 0;
+    .skill-card {
+      background: #fff;
+      padding: 25px 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: all 0.4s ease;
       position: relative;
-    }
-    .skills-details .boxes .topic {
-      font-size: 18px;
-      color: #4070f4;
-      margin-bottom: 10px;
-    }
-    .skills-details .boxes .per {
-      font-size: 20px;
-      color: #0E2431;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .progress-bar {
-      height: 8px;
-      background: #e0e0e0;
-      border-radius: 4px;
-      margin-top: 5px;
       overflow: hidden;
-      position: relative;
+      z-index: 1;
+      cursor: default;
     }
-    .progress-bar::before {
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(64, 112, 244, 0.15);
+    }
+    .skill-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
       height: 100%;
-      width: calc(var(--percentage) * 1%);
       background: #4070f4;
-      border-radius: 4px;
-      transition: width 1s ease-out;
+      z-index: -1;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.4s ease;
+    }
+    .skill-card:hover::before {
+      transform: scaleY(1);
+    }
+    .skill-card .icon {
+      height: 60px;
+      width: 60px;
+      background: #4070f4;
+      color: #fff;
+      font-size: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px auto;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+    .skill-card:hover .icon {
+      background-color: #fff;
+      color: #4070f4;
+      border: 2px solid #4070f4;
+    }
+    .skill-card .topic {
+      font-size: 20px;
+      font-weight: 600;
+      color: #0E2431;
+      margin-bottom: 12px;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+    .skill-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 0;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+    .skill-card:hover .topic,
+    .skill-card:hover p {
+      color: #fff !important;
     }
 
     /* Services Section */
@@ -602,16 +684,6 @@
       }
       section .topic {
         text-align: left;
-      }
-      .skills-details {
-        flex-direction: row;
-      }
-      .skills-details .text {
-        width: 50%;
-      }
-      .skills-details .boxes {
-        width: 45%;
-        margin-top: 0;
       }
       .services .boxes .box {
         width: calc(50% - 15px);

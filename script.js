@@ -88,3 +88,93 @@
     document.addEventListener('contextmenu', function(event) {
       event.preventDefault();
     });
+
+    /* ── Form validation + AJAX submit for Contact Section ── */
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      const submitBtn = document.getElementById('submitBtn');
+      const successBanner = document.getElementById('successBanner');
+      const errorBanner = document.getElementById('errorBanner');
+
+      function validateField(el) {
+        const isEmpty = !el.value.trim();
+        const isInvalid = el.required && (isEmpty || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)));
+        el.classList.toggle('error', isInvalid);
+        return !isInvalid;
+      }
+
+      function updateCount(el) {
+        const charCount = document.getElementById('charCount');
+        if (charCount) charCount.textContent = el.value.length;
+      }
+
+      const msgField = document.getElementById('message');
+      if (msgField) {
+        msgField.addEventListener('input', function() {
+          updateCount(this);
+        });
+      }
+
+      // Live validation on blur
+      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(el => {
+        el.addEventListener('blur', () => validateField(el));
+        el.addEventListener('input', () => { if (el.classList.contains('error')) validateField(el); });
+      });
+
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Validate all required fields
+        let valid = true;
+        contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(el => {
+          if (!validateField(el)) valid = false;
+        });
+
+        // Check consent
+        const consent = document.getElementById('consent');
+        if (consent && !consent.checked) {
+          consent.classList.add('error');
+          valid = false;
+        } else if (consent) {
+          consent.classList.remove('error');
+        }
+
+        // Message min length
+        const msg = document.getElementById('message');
+        if (msg && msg.value.trim().length < 20) {
+          msg.classList.add('error');
+          valid = false;
+        }
+
+        if (!valid) return;
+
+        // Loading state
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+        successBanner.classList.remove('show');
+        errorBanner.classList.remove('show');
+
+        try {
+          const formData = new FormData(contactForm);
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+          const data = await response.json();
+
+          if (data.success) {
+            successBanner.classList.add('show');
+            contactForm.reset();
+            const charCount = document.getElementById('charCount');
+            if (charCount) charCount.textContent = '0';
+          } else {
+            errorBanner.classList.add('show');
+          }
+        } catch (err) {
+          errorBanner.classList.add('show');
+        } finally {
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = false;
+        }
+      });
+    }

@@ -52,6 +52,12 @@
     /* ARTICLE */
     .post-content { background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 3px 15px rgba(0,0,0,.07); }
 
+    /* Featured image (top of article, full-width) */
+    .post-featured-img { width: 100%; border-radius: 14px; overflow: hidden; margin: 0 0 36px 0; box-shadow: 0 6px 28px rgba(0,0,0,0.12); position: relative; line-height: 0; }
+    .post-featured-img img { width: 100%; height: 440px; object-fit: cover; display: block; border-radius: 14px; transition: transform 0.5s ease; }
+    .post-featured-img:hover img { transform: scale(1.025); }
+    .post-featured-img figcaption { font-size: 0.76rem; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,0.58)); position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 11px; text-align: center; font-style: italic; }
+
     /* TOC */
     .toc { background: #f0f4ff; border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0; padding: 20px 25px; margin-bottom: 35px; }
     .toc h3 { font-size: 16px; color: var(--dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
@@ -87,7 +93,8 @@
 
     /* Author box */
     .author-box { display: flex; gap: 20px; background: #f8f9fa; border-radius: 12px; padding: 25px; margin-top: 40px; align-items: center; }
-    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #fff; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); overflow: hidden; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .author-info h3 { font-size: 18px; margin-bottom: 4px; }
     .author-info .role { font-size: 13px; color: var(--blue); font-weight: 500; margin-bottom: 8px; }
     .author-info p { font-size: 13px; color: #666; line-height: 1.6; }

@@ -145,7 +145,8 @@
 
     /* Author box */
     .author-box { display: flex; gap: 20px; background: #f8f9fa; border-radius: 12px; padding: 25px; margin-top: 40px; align-items: center; }
-    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #fff; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); overflow: hidden; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .author-info h3 { font-size: 18px; margin-bottom: 4px; }
     .author-info .role { font-size: 13px; color: var(--blue); font-weight: 500; margin-bottom: 8px; }
     .author-info p { font-size: 13px; color: #666; line-height: 1.6; }
@@ -283,6 +284,16 @@
   <!-- LAYOUT -->
   <div class="post-layout">
     <article class="post-content">
+
+      <!-- FEATURED IMAGE -->
+      <figure class="post-featured-img">
+        <img
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&auto=format&fit=crop"
+          alt="On-page SEO guide 2026 — desk with laptop, notebook and coffee showing content optimization workflow"
+          loading="eager"
+        >
+        <figcaption>On-page SEO in 2026 is about semantic relevance, E-E-A-T, and user experience — not keyword stuffing.</figcaption>
+      </figure>
 
       <div class="toc">
         <h3><i class="fas fa-list"></i> Table of Contents</h3>
@@ -530,7 +541,7 @@
 
       <!-- AUTHOR BOX -->
       <div class="author-box">
-        <div class="author-avatar">👤</div>
+        <div class="author-avatar"><img src="/assets/person/abiral-acharya-seo-expert-nepal.webp" alt="Abiral Acharya" loading="lazy"></div>
         <div class="author-info">
           <h3>Abiral Acharya</h3>
           <div class="role">SEO Expert &amp; Web Developer | Birtamode, Jhapa, Nepal</div>

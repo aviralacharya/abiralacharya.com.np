@@ -87,7 +87,8 @@
 
     /* Author box */
     .author-box { display: flex; gap: 20px; background: #f8f9fa; border-radius: 12px; padding: 25px; margin-top: 40px; align-items: center; }
-    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #fff; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); overflow: hidden; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .author-info h3 { font-size: 18px; margin-bottom: 4px; }
     .author-info .role { font-size: 13px; color: var(--blue); font-weight: 500; margin-bottom: 8px; }
     .author-info p { font-size: 13px; color: #666; line-height: 1.6; }

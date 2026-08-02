@@ -108,6 +108,7 @@
       <button class="filter-btn" onclick="filterCategory('content',this)">Content &amp; Keywords</button>
       <button class="filter-btn" onclick="filterCategory('tools',this)">SEO Tools</button>
       <button class="filter-btn" onclick="filterCategory('casestudy',this)">Case Studies</button>
+      <button class="filter-btn" onclick="filterCategory('security',this)">Web Security</button>
     </div>
   </div>
 
@@ -115,12 +116,12 @@
   <div class="featured-section" id="featuredSection">
     <div class="section-label"><span>⭐ Featured Post</span></div>
     <a href="/blogs/complete-seo-guide-nepal-businesses/" class="featured-card" data-category="seo">
-      <div class="featured-img cat-seo">
+      <div class="featured-img">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80&auto=format&fit=crop" alt="Complete SEO guide for Nepali businesses" loading="lazy">
         <div class="img-content">
           <div class="post-num">01</div>
           <div class="badge"><i class="fas fa-star"></i> &nbsp; Featured</div>
         </div>
-        <i class="fas fa-search big-icon"></i>
       </div>
       <div class="featured-body">
         <div class="post-meta">
@@ -140,9 +141,28 @@
     <div class="section-label"><span>All Posts</span></div>
     <div class="blog-grid" id="blogGrid">
 
+      <article class="blog-card" data-category="security" onclick="location.href='/blogs/tu-fohss-entrance-portal-security-vulnerability-idor'">
+        <div class="card-thumb">
+          <img src="/blogs/tu-fohss-entrance-portal-security-vulnerability-idor/images/idor-login-tufohss-portal.png" alt="TU FOHSS Entrance Portal security vulnerability" loading="lazy">
+          <span class="card-cat-badge">Web Security</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date"><i class="far fa-calendar-alt"></i> Aug 2026</span>
+            <span class="card-read"><i class="far fa-clock"></i> 10 min</span>
+          </div>
+          <h3>Critical Security Vulnerability Found in TU FOHSS Entrance Portal</h3>
+          <p>A responsible disclosure of a Broken Access Control (IDOR) vulnerability identified in the TU FOHSS Entrance Portal — impact, risks, and how to fix it.</p>
+          <div class="card-footer">
+            <div class="author-chip"><div class="avatar">AA</div><span>Abiral Acharya</span></div>
+            <span class="card-link">Read <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
       <article class="blog-card" data-category="technical" onclick="location.href='/blogs/technical-seo-audit-20-checklist'">
-        <div class="card-thumb cat-technical">
-          <i class="fas fa-cogs thumb-icon"></i>
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80&auto=format&fit=crop" alt="Technical SEO audit checklist" loading="lazy">
           <span class="card-cat-badge">Technical SEO</span>
         </div>
         <div class="card-body">
@@ -160,8 +180,8 @@
       </article>
 
       <article class="blog-card" data-category="local" onclick="location.href='/blogs/optimize-local-seo-nepal-google-business-profile'">
-        <div class="card-thumb cat-local">
-          <i class="fas fa-map-marker-alt thumb-icon"></i>
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800&q=80&auto=format&fit=crop" alt="Google Business Profile optimization for Nepal" loading="lazy">
           <span class="card-cat-badge">Local SEO</span>
         </div>
         <div class="card-body">
@@ -179,8 +199,8 @@
       </article>
 
       <article class="blog-card" data-category="content" onclick="location.href='/blogs/keyword-research-nepal-find-low-competition'">
-        <div class="card-thumb cat-content">
-          <i class="fas fa-keyboard thumb-icon"></i>
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop" alt="Keyword research for Nepal" loading="lazy">
           <span class="card-cat-badge">Keywords</span>
         </div>
         <div class="card-body">
@@ -198,8 +218,8 @@
       </article>
 
       <article class="blog-card" data-category="tools" onclick="location.href='/blogs/free-seo-optimization-tools'">
-        <div class="card-thumb cat-tools">
-          <i class="fas fa-tools thumb-icon"></i>
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80&auto=format&fit=crop" alt="Free SEO tools for Nepal" loading="lazy">
           <span class="card-cat-badge">SEO Tools</span>
         </div>
         <div class="card-body">
@@ -217,8 +237,8 @@
       </article>
 
       <article class="blog-card" data-category="casestudy" onclick="location.href='/blogs/darumandu-nepal-night-liquor-delivery-case-study/'">
-        <div class="card-thumb cat-casestudy">
-          <i class="fas fa-chart-line thumb-icon"></i>
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop" alt="Darumandu.com SEO case study" loading="lazy">
           <span class="card-cat-badge">Case Study</span>
         </div>
         <div class="card-body">
@@ -236,8 +256,8 @@
       </article>
 
       <article class="blog-card" data-category="seo" onclick="location.href='/blogs/on-page-seo-guide-2026'">
-        <div class="card-thumb cat-seo">
-          <i class="fas fa-file-alt thumb-icon"></i>
+        <div class="card-thumb">
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80&auto=format&fit=crop" alt="On-page SEO guide 2026" loading="lazy">
           <span class="card-cat-badge">On-Page SEO</span>
         </div>
         <div class="card-body">
@@ -316,6 +336,7 @@
           <li><a href="/services#local">Local SEO Nepal</a></li>
           <li><a href="/services#keyword">Keyword Research</a></li>
           <li><a href="/services#audit">Site Audit</a></li>
+          <li><a href="/seo-aeo-consultant-kathmandu-nepal/">SEO/AEO Kathmandu</a></li>
         </ul>
       </div>
       <div class="footer-column">

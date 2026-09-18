@@ -15,3 +15,6 @@ Allow: /
 
 # Link to your sitemap
 Sitemap: https://aviralacharya.com.np/sitemap.xml
+
+# Machine-readable site description for LLM crawlers
+# LLMs.txt: https://aviralacharya.com.np/llms.txt

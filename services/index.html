@@ -22,8 +22,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -71,6 +69,8 @@
     .navbar .menu a:hover::after { width:100%; }
     nav.sticky .menu a { color:#fff; }
     nav.sticky .menu a:hover { color:var(--dark); }
+    .navbar .menu a.active { color:var(--blue); }
+    nav.sticky .menu a.active, nav.sticky .menu a.active:hover { color:#fff; }
     .navbar .media-icons { display:flex; align-items:center; }
     .navbar .media-icons a { color:var(--blue); font-size:18px; margin:0 6px; transition:transform .3s ease; }
     .navbar .media-icons a:hover { transform:translateY(-3px); }
@@ -309,7 +309,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/#skills">Skills</a></li>
-        <li><a href="/services" style="color:#4070f4">Services</a></li>
+        <li><a href="/services" class="active">Services</a></li>
         <li><a href="/blogs">Blog</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="https://bcapoint.com/" target="_blank">BCA Notes</a></li>
@@ -349,14 +349,14 @@
   <!-- ══ STICKY SERVICE NAV ══ -->
   <div class="srv-nav-strip" id="services-start">
     <div class="srv-nav-inner">
-      <button class="srv-nav-btn active" onclick="scrollTo('onpage')">On-Page SEO</button>
-      <button class="srv-nav-btn" onclick="scrollTo('technical')">Technical SEO</button>
-      <button class="srv-nav-btn" onclick="scrollTo('local')">Local SEO</button>
-      <button class="srv-nav-btn" onclick="scrollTo('keyword')">Keyword Research</button>
-      <button class="srv-nav-btn" onclick="scrollTo('semantic')">Semantic SEO</button>
-      <button class="srv-nav-btn" onclick="scrollTo('offpage')">Off-Page &amp; Links</button>
-      <button class="srv-nav-btn" onclick="scrollTo('audit')">Site Audit</button>
-      <button class="srv-nav-btn" onclick="scrollTo('ecom')">E-Commerce SEO</button>
+      <a href="#onpage" class="srv-nav-btn active">On-Page SEO</a>
+      <a href="#technical" class="srv-nav-btn">Technical SEO</a>
+      <a href="#local" class="srv-nav-btn">Local SEO</a>
+      <a href="#keyword" class="srv-nav-btn">Keyword Research</a>
+      <a href="#semantic" class="srv-nav-btn">Semantic SEO</a>
+      <a href="#offpage" class="srv-nav-btn">Off-Page &amp; Links</a>
+      <a href="#audit" class="srv-nav-btn">Site Audit</a>
+      <a href="#ecom" class="srv-nav-btn">E-Commerce SEO</a>
     </div>
   </div>
 
@@ -945,12 +945,24 @@
   <script>
     document.getElementById('footerYear').textContent = new Date().getFullYear();
 
-    // Nav sticky + scroll btn
+    // Nav sticky + scroll btn + scrollspy
     const nav = document.querySelector('nav');
     const scrollBtn = document.querySelector('.scroll-button a');
+    const srvIds = ['onpage', 'technical', 'local', 'keyword', 'semantic', 'offpage', 'audit', 'ecom'];
+    const srvNavBtns = Array.from(document.querySelectorAll('.srv-nav-btn'));
+    function updateActiveNav() {
+      const pos = window.scrollY + 160;
+      let current = srvIds[0];
+      for (const id of srvIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= pos) current = id;
+      }
+      srvNavBtns.forEach(b => b.classList.toggle('active', b.getAttribute('href') === '#' + current));
+    }
     window.onscroll = () => {
       nav.classList.toggle('sticky', document.documentElement.scrollTop > 20);
       scrollBtn.style.display = document.documentElement.scrollTop > 20 ? 'block' : 'none';
+      updateActiveNav();
     };
 
     // Mobile menu
@@ -962,14 +974,6 @@
     const hideMenu = () => { navBar.classList.remove('active'); menuBtn.style.opacity='1'; menuBtn.style.pointerEvents='auto'; body.style.overflow='auto'; };
     cancelBtn.onclick = hideMenu;
     document.querySelectorAll('.menu li a').forEach(l => l.addEventListener('click', hideMenu));
-
-    // Smooth scroll for service nav
-    function scrollTo(id) {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      document.querySelectorAll('.srv-nav-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
-    }
 
     // FAQ accordion
     function toggleFaq(el) {

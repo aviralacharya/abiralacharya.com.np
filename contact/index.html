@@ -55,6 +55,8 @@
     .navbar .menu a:hover::after { width:100%; }
     nav.sticky .menu a { color:#fff; }
     nav.sticky .menu a:hover { color:var(--dark); }
+    .navbar .menu a.active { color:var(--blue); }
+    nav.sticky .menu a.active, nav.sticky .menu a.active:hover { color:#fff; }
     .navbar .media-icons { display:flex; align-items:center; }
     .navbar .media-icons a { color:var(--blue); font-size:18px; margin:0 6px; transition:transform .3s ease; }
     .navbar .media-icons a:hover { transform:translateY(-3px); }
@@ -359,7 +361,7 @@
         <li><a href="/#skills">Skills</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/blogs">Blog</a></li>
-        <li><a href="/contact" style="color:#4070f4">Contact</a></li>
+        <li><a href="/contact" class="active">Contact</a></li>
         <li><a href="https://bcapoint.com/" target="_blank">BCA Notes</a></li>
         <div class="cancel-btn"><i class="fas fa-times" aria-label="Close menu"></i></div>
       </ul>

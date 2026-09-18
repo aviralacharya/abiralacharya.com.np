@@ -349,8 +349,8 @@
       display: flex;
       flex-wrap: nowrap;
       margin-top: 20px;
-      width: 200%;
-      animation: infiniteScroll 25s linear infinite;
+      width: max-content;
+      animation: infiniteScroll 30s linear infinite;
       will-change: transform;
       transform: translateZ(0);
     }
@@ -361,7 +361,6 @@
       display: flex;
       flex-wrap: nowrap;
       flex-shrink: 0;
-      width: 50%;
       box-sizing: border-box;
       gap: 30px;
       padding-right: 30px;
@@ -832,28 +831,6 @@
       text-align: center;
     }
 
-    /* Footer */
-    footer {
-      background: #4070f4;
-      padding: 15px 0;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-    }
-    footer .text span {
-      font-size: 15px;
-      font-weight: 400;
-      color: #fff;
-    }
-    footer .text span a {
-      font-weight: 500;
-      color: #FFF;
-      transition: all 0.3s ease;
-    }
-    footer .text span a:hover {
-      text-decoration: underline;
-      opacity: 0.9;
-    }
-
     /* Scroll Button */
     .scroll-button a {
       position: fixed;
@@ -1059,15 +1036,9 @@
     }
 
     /* Global */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
     body {
         background: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
     }
 
     /* Footer */
@@ -1102,7 +1073,7 @@
         left: 0;
         width: 40px;
         height: 2px;
-    
+        background: #4070f4;
     }
 
     .footer-column p {

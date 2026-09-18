@@ -1,9 +1,9 @@
-# Allow all standard web crawlers (Includes Bing/Copilot)
+# Allow all standard web crawlers
 User-agent: *
 Allow: /
 Disallow: /feed/
 
-# Explicitly welcoming AI for training and real-time citation
+
 User-agent: GPTBot
 User-agent: ChatGPT-User
 User-agent: Google-Extended

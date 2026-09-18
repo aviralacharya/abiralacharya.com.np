@@ -348,17 +348,27 @@
     .clients .client-logos {
       display: flex;
       flex-wrap: nowrap;
-      gap: 30px;
       margin-top: 20px;
-      width: max-content;
+      width: 200%;
       animation: infiniteScroll 25s linear infinite;
+      will-change: transform;
+      transform: translateZ(0);
     }
     .clients .client-logos:hover {
       animation-play-state: paused;
     }
+    .clients .client-logos .logo-set {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      width: 50%;
+      box-sizing: border-box;
+      gap: 30px;
+      padding-right: 30px;
+    }
     @keyframes infiniteScroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-50% - 15px)); }
+      100% { transform: translateX(-50%); }
     }
     .clients .logo-box {
       width: 150px;

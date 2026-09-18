@@ -64,7 +64,8 @@
     });
 
     // Update current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('footerYear') || document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Animate progress bars
     window.addEventListener('load', function() {

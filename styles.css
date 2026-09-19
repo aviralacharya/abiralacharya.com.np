@@ -183,6 +183,13 @@
       line-height: 1.2;
       margin-bottom: 10px;
     }
+    .home .text-two h1 {
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+    }
     .home .text-three {
       font-size: clamp(20px, 5vw, 35px);
       margin: 10px 0;

@@ -1167,3 +1167,77 @@
             font-size: 0.75rem;
         }
     }
+
+    /* Nav contact (phone + 24/7 + Free Site Review CTA) */
+    .navbar .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .navbar .nav-contact {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .navbar .nav-phone {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #4070f4;
+        white-space: nowrap;
+    }
+    nav.sticky .navbar .nav-phone {
+        color: #fff;
+    }
+    .navbar .nav-open {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #16a34a;
+        white-space: nowrap;
+    }
+    nav.sticky .navbar .nav-open {
+        color: #d1fae5;
+    }
+    .navbar .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        background: #4070f4;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 30px;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+    .navbar .nav-cta:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
+    nav.sticky .navbar .nav-cta {
+        background: #fff;
+        color: #4070f4;
+    }
+    .keyboard-nav .navbar .nav-contact a:focus {
+        outline: 2px solid #4070f4;
+        outline-offset: 2px;
+    }
+
+    /* Hide phone + 24/7 below 1300px, keep CTA + social icons */
+    @media (max-width: 1299px) {
+        .navbar .nav-phone,
+        .navbar .nav-open {
+            display: none;
+        }
+    }
+    /* Mobile: hide the whole right side group */
+    @media (max-width: 767px) {
+        .navbar .navbar-right {
+            display: none;
+        }
+    }

@@ -183,3 +183,16 @@
     .blog-card:nth-child(4) { animation-delay:.26s; }
     .blog-card:nth-child(5) { animation-delay:.33s; }
     .blog-card:nth-child(6) { animation-delay:.40s; }
+
+    /* Nav contact (phone + 24/7 + Free Site Review CTA) */
+    .navbar .navbar-right { display:flex; align-items:center; gap:16px; }
+    .navbar .nav-contact { display:flex; align-items:center; gap:12px; }
+    .navbar .nav-phone { display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--blue); white-space:nowrap; }
+    nav.sticky .navbar .nav-phone { color:#fff; }
+    .navbar .nav-open { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; color:#16a34a; white-space:nowrap; }
+    nav.sticky .navbar .nav-open { color:#d1fae5; }
+    .navbar .nav-cta { display:inline-flex; align-items:center; background:var(--blue); color:#fff; font-size:13px; font-weight:600; padding:8px 14px; border-radius:30px; white-space:nowrap; transition:all .3s ease; }
+    .navbar .nav-cta:hover { transform:translateY(-2px); filter:brightness(1.1); }
+    nav.sticky .navbar .nav-cta { background:#fff; color:var(--blue); }
+    @media (max-width:1299px) { .navbar .nav-phone, .navbar .nav-open { display:none; } }
+    @media (max-width:767px) { .navbar .navbar-right { display:none; } }

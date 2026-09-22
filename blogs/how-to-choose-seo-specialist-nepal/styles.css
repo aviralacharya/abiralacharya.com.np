@@ -297,7 +297,7 @@
 
     .post-featured-img img, .post-img img { height: auto; }
 
-    .post-hero .breadcrumb, .post-hero .breadcrumb span { color:#f1f5f9; }
-    .post-hero .breadcrumb a { color:#f1f5f9; text-decoration:underline; }
-    .post-hero .breadcrumb a:hover { color:#fff; }
+    .post-hero .breadcrumb, .post-hero .breadcrumb span { color:#374151; }
+    .post-hero .breadcrumb a { color:#1d4ed8; text-decoration:underline; }
+    .post-hero .breadcrumb a:hover { color:#1e40af; }
     .post-content p a { display:inline-block; margin: 0 6px; }

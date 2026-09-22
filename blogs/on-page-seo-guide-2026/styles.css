@@ -297,3 +297,5 @@
     .breadcrumb a { color:#1d4ed8; text-decoration:underline; }
     .breadcrumb a:hover { color:#1e40af; }
     .post-content p a { display:inline-block; margin: 0 6px; }
+
+    .post-featured-img img, .post-img img { height: auto; }

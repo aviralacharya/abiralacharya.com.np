@@ -1251,9 +1251,15 @@
             display: none;
         }
     }
-    /* Mobile: hide the whole right side group */
+    /* Mobile: keep the CTA visible next to the hamburger */
     @media (max-width: 767px) {
         .navbar .navbar-right {
-            display: none;
+            display: flex;
+            align-items: center;
+            margin-right: 48px;
+        }
+        .navbar .nav-cta {
+            font-size: 12px;
+            padding: 6px 12px;
         }
     }

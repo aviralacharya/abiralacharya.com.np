@@ -85,11 +85,6 @@
       document.documentElement.classList.remove('keyboard-nav');
     });
 
-    // Prevent context menu
-    document.addEventListener('contextmenu', function(event) {
-      event.preventDefault();
-    });
-
     /* ── Form validation + AJAX submit for Contact Section ── */
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {

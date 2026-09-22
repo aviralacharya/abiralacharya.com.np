@@ -992,9 +992,6 @@
     cancelBtn.onclick = hideMenu;
     document.querySelectorAll('.menu li a').forEach(l => l.addEventListener('click', hideMenu));
 
-    // Disable context menu (matching portfolio behavior)
-    document.addEventListener('contextmenu', e => e.preventDefault());
-
     // Accordion FAQ toggles
     document.querySelectorAll('.faq-q').forEach(item => {
       item.addEventListener('click', () => {

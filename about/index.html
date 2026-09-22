@@ -959,8 +959,6 @@
     const hideMenu = () => { navBar.classList.remove('active'); menuBtn.style.opacity = '1'; menuBtn.style.pointerEvents = 'auto'; body.style.overflow = 'auto'; };
     cancelBtn.onclick = hideMenu;
     document.querySelectorAll('.menu li a').forEach(l => l.addEventListener('click', hideMenu));
-
-    document.addEventListener('contextmenu', e => e.preventDefault());
   </script>
 </body>
 </html>

@@ -31,17 +31,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
-  <script>
-    window.addEventListener('load', () => {
-      const s = document.createElement('script');
-      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8719236609788400";
-      s.async = true; s.crossOrigin = "anonymous";
-      document.body.appendChild(s);
-    });
-  </script>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCs6KVjbNBYlgoKfw72.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCv6KVjbNBYlgoCxCvjsGyN.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></noscript>
 
   <link rel="stylesheet" href="styles.css?v=4">
 
@@ -65,7 +63,7 @@
 
   <nav id="top">
     <div class="navbar">
-      <div class="logo"><a href="/" aria-label="Home">ABIRAL</a></div>
+      <div class="logo"><a href="/">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -91,6 +89,7 @@
     </div>
     <div class="menu-btn"><i class="fas fa-bars" aria-label="Open menu"></i></div>
   </nav>
+  <main id="main">
 
   <!-- HERO -->
   <section class="blogs-hero">
@@ -331,16 +330,17 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="footer-content">
       <div class="footer-column">
         <h3>SEO Blog Nepal | Abiral Acharya</h3>
         <p>Practical SEO guides and case studies for businesses and creators in Nepal.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <div class="footer-column">
@@ -432,5 +432,6 @@
       document.getElementById('emailInput').value = '';
     }
   </script>
+<!-- fa-font-display-fix --><style id="fa-font-display-fix">@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff) format('woff')}</style>
 </body>
 </html>

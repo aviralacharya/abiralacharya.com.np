@@ -30,8 +30,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCs6KVjbNBYlgoKfw72.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCv6KVjbNBYlgoCxCvjsGyN.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></noscript>
   <link rel="stylesheet" href="styles.css?v=4">
   <style>html{scroll-padding-top:80px}</style>
 
@@ -51,7 +57,7 @@
 
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; }
-    :root { --blue: #4070f4; --dark: #0E2431; --muted: #555; }
+    :root { --blue: #2563eb; --dark: #0E2431; --muted: #555; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: var(--dark); }
     ::-webkit-scrollbar { width: 8px; }
@@ -77,12 +83,12 @@
     .navbar .media-icons a { color: var(--blue); font-size: 18px; margin: 0 6px; transition: transform .3s ease; }
     .navbar .media-icons a:hover { transform: translateY(-3px); }
     nav.sticky .media-icons a { color: #fff; }
-    nav .navbar .menu-btn { color: var(--blue); font-size: 24px; cursor: pointer; display: none; background: transparent; border: none; z-index: 999; }
+    nav .navbar .menu-btn { color: var(--blue); font-size: 24px; cursor: pointer; display: none; background: transparent; border: none; z-index: 4b5563; }
     nav.sticky .navbar .menu-btn { color: #fff; }
     .navbar .menu .cancel-btn { position: absolute; color: #fff; right: 20px; top: 20px; font-size: 24px; cursor: pointer; display: none; background: transparent; border: none; z-index: 9999; }
 
     /* POST HERO */
-    .post-hero { background: linear-gradient(135deg, #0E2431 0%, #1a3a55 60%, #4070f4 100%); padding: 130px 5% 60px; position: relative; overflow: hidden; }
+    .post-hero { background: linear-gradient(135deg, #0E2431 0%, #1a3a55 60%, #2563eb 100%); padding: 130px 5% 60px; position: relative; overflow: hidden; }
     .post-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .post-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 20px; flex-wrap: wrap; }
@@ -127,7 +133,7 @@
     .callout p { margin: 0; font-size: 14px; color: #333; line-height: 1.7; }
 
     /* CTA inside post */
-    .post-cta { background: linear-gradient(135deg, #0E2431, #4070f4); border-radius: 12px; padding: 30px; text-align: center; margin: 35px 0; }
+    .post-cta { background: linear-gradient(135deg, #0E2431, #2563eb); border-radius: 12px; padding: 30px; text-align: center; margin: 35px 0; }
     .post-cta h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
     .post-cta p { color: rgba(255,255,255,.8); font-size: 15px; margin-bottom: 20px; }
     .post-cta a { display: inline-block; padding: 12px 28px; background: #fff; color: var(--blue); border-radius: 8px; font-weight: 600; font-size: 15px; transition: all .3s; }
@@ -139,13 +145,13 @@
     .compare-table td { padding: 11px 16px; border-bottom: 1px solid #eef2ff; color: #444; vertical-align: top; }
     .compare-table tr:nth-child(even) td { background: #f8f9ff; }
     .compare-table tr:last-child td { border-bottom: none; }
-    .tag-dead { display: inline-block; background: #fee2e2; color: #dc2626; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: 4px; }
-    .tag-works { display: inline-block; background: #dcfce7; color: #16a34a; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: 4px; }
+    .tag-dead { display: inline-block; background: #fee2e2; color: #b91c1c; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: 4px; }
+    .tag-works { display: inline-block; background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: 4px; }
     .tag-evolved { display: inline-block; background: #fef3c7; color: #d97706; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 50px; margin-left: 4px; }
 
     /* Author box */
     .author-box { display: flex; gap: 20px; background: #f8f9fa; border-radius: 12px; padding: 25px; margin-top: 40px; align-items: center; }
-    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #4070f4); overflow: hidden; flex-shrink: 0; border: 3px solid var(--blue); }
+    .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0E2431, #2563eb); overflow: hidden; flex-shrink: 0; border: 3px solid var(--blue); }
     .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .author-info h3 { font-size: 18px; margin-bottom: 4px; }
     .author-info .role { font-size: 13px; color: var(--blue); font-weight: 500; margin-bottom: 8px; }
@@ -156,9 +162,9 @@
     .share-section h3 { font-size: 16px; margin-bottom: 15px; color: var(--dark); }
     .share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
     .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: all .3s; font-family: 'Poppins', sans-serif; }
-    .share-btn.fb { background: #1877f2; color: #fff; }
-    .share-btn.tw { background: #1da1f2; color: #fff; }
-    .share-btn.wa { background: #25d366; color: #fff; }
+    .share-btn.fb { background: #0e63c4; color: #fff; }
+    .share-btn.tw { background: #0874b7; color: #fff; }
+    .share-btn.wa { background:#0f766e; color: #fff; }
     .share-btn.li { background: #0a66c2; color: #fff; }
     .share-btn:hover { opacity: .9; transform: translateY(-2px); }
 
@@ -179,7 +185,7 @@
     .sidebar { display: flex; flex-direction: column; gap: 25px; }
     .sidebar-widget { background: #fff; border-radius: 12px; padding: 22px; box-shadow: 0 3px 15px rgba(0,0,0,.07); }
     .widget-title { font-size: 17px; font-weight: 600; color: var(--dark); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--blue); }
-    .cta-widget { background: linear-gradient(135deg, #0E2431, #4070f4); color: #fff; text-align: center; }
+    .cta-widget { background: linear-gradient(135deg, #0E2431, #2563eb); color: #fff; text-align: center; }
     .cta-widget .widget-title { color: #fff; border-color: rgba(255,255,255,.3); }
     .cta-widget p { font-size: 13px; color: rgba(255,255,255,.85); line-height: 1.6; margin-bottom: 15px; }
     .cta-widget .cta-btn { display: inline-block; padding: 10px 22px; background: #fff; color: var(--blue); border-radius: 8px; font-weight: 600; font-size: 13px; transition: all .3s; }
@@ -188,14 +194,14 @@
     .popular-post-icon { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .popular-post-text a { font-size: 12px; font-weight: 600; color: var(--dark); line-height: 1.4; display: block; margin-bottom: 3px; transition: color .3s; }
     .popular-post-text a:hover { color: var(--blue); }
-    .popular-post-text span { font-size: 11px; color: #aaa; }
+    .popular-post-text span { font-size: 11px; color: #4b5563; }
     .services-list { list-style: none; }
     .services-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #555; }
     .services-list li:last-child { border-bottom: none; }
     .services-list li i { color: var(--blue); width: 16px; }
     .contact-cta { text-align: center; }
-    .contact-cta a.whatsapp-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: #25d366; color: #fff; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all .3s; width: 100%; justify-content: center; }
-    .contact-cta a.whatsapp-btn:hover { background: #1da855; }
+    .contact-cta a.whatsapp-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background:#0f766e; color: #fff; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all .3s; width: 100%; justify-content: center; }
+    .contact-cta a.whatsapp-btn:hover { background:#15803d; }
 
     /* FOOTER */
     footer { background: #2c3e50; color: #fff; padding: 3rem 1rem 1rem; font-family: 'Poppins', sans-serif; }
@@ -208,7 +214,7 @@
     .footer-column ul li a:hover { color: #3498db; }
     .footer-column ul li i { margin-right: 6px; color: var(--blue); }
     .social-links { display: flex; gap: .8rem; margin-top: .8rem; }
-    .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,.1); border-radius: 50%; color: white; transition: all .3s; font-size: .9rem; }
+    .social-links a { display: inline-flex; align-items: center; justify-content: center; width:44px; height:44px; background: rgba(255,255,255,.1); border-radius: 50%; color: white; transition: all .3s; font-size: .9rem; }
     .social-links a:hover { background: #3498db; transform: translateY(-3px); }
     .copyright { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); font-size: .85rem; color: #ccc; margin-top: 2rem; }
 
@@ -241,7 +247,7 @@
   <!-- NAV -->
   <nav id="top">
     <div class="navbar">
-      <div class="logo"><a href="/" aria-label="Home">ABIRAL</a></div>
+      <div class="logo"><a href="/">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -267,6 +273,7 @@
       <div class="menu-btn"><i class="fas fa-bars" aria-label="Open menu"></i></div>
     </div>
   </nav>
+  <main id="main">
 
   <!-- HERO -->
   <div class="post-hero">
@@ -302,7 +309,7 @@
       </figure>
 
       <div class="toc">
-        <h3><i class="fas fa-list"></i> Table of Contents</h3>
+        <h2><i class="fas fa-list"></i> Table of Contents</h2>
         <ol>
           <li><a href="#my-experience">My Experience as an SEO Expert in Nepal</a></li>
           <li><a href="#whats-dead">What's Dead in On-Page SEO (Stop Doing These)</a></li>
@@ -549,7 +556,7 @@
 
       <!-- AUTHOR BOX -->
       <div class="author-box">
-        <div class="author-avatar"><img src="/assets/person/abiral-acharya-seo-expert-nepal.webp" alt="Abiral Acharya" loading="lazy"></div>
+        <div class="author-avatar"><img src="/assets/person/abiral-acharya-avatar.webp" width="80" height="80" alt="Abiral Acharya" loading="lazy"></div>
         <div class="author-info">
           <h3>Abiral Acharya</h3>
           <div class="role">SEO Expert &amp; Web Developer | Birtamode, Jhapa, Nepal</div>
@@ -632,7 +639,7 @@
       <h2>Related Posts</h2>
       <div class="related-grid">
         <div class="related-card">
-          <div class="related-card-img" style="background:linear-gradient(135deg,#0E2431,#4070f4);">🔍</div>
+          <div class="related-card-img" style="background:linear-gradient(135deg,#0E2431,#2563eb);">🔍</div>
           <div class="related-card-body">
             <div class="cat">SEO</div>
             <h3><a href="/blogs/complete-seo-guide-nepal-businesses/">Complete SEO Guide for Nepal Businesses 2025</a></h3>
@@ -657,16 +664,17 @@
   </div>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="footer-content">
       <div class="footer-column">
         <h3>Abiral Acharya | SEO Consultant Nepal</h3>
         <p>Helping businesses rank on Google and grow organically from Birtamode, Jhapa, Nepal.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <div class="footer-column">
@@ -748,5 +756,6 @@
     function shareLi() { window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank'); }
 
   </script>
+<!-- fa-font-display-fix --><style id="fa-font-display-fix">@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff) format('woff')}</style>
 </body>
 </html>

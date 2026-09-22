@@ -19,16 +19,6 @@
     gtag('config', 'G-EQCYCBST0T');
   </script>
 
-  <script>
-    window.addEventListener('load', () => {
-      const s = document.createElement('script');
-      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8719236609788400";
-      s.async = true;
-      s.crossOrigin = "anonymous";
-      document.body.appendChild(s);
-    });
-  </script>
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aviralacharya.com.np/seo-aeo-consultant-kathmandu-nepal/">
@@ -51,8 +41,15 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCs6KVjbNBYlgoKfw72.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCv6KVjbNBYlgoCxCvjsGyN.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></noscript>
   
   <link rel="stylesheet" href="styles.css?v=4">
 
@@ -108,7 +105,7 @@
     /* --- HERO --- */
     .kathmandu-hero {
       padding: 130px 0 80px;
-      background: linear-gradient(135deg, #0E2431 0%, #1a3a55 60%, #4070f4 100%);
+      background: linear-gradient(135deg, #0E2431 0%, #1a3a55 60%, #2563eb 100%);
       position: relative;
       overflow: hidden;
     }
@@ -167,7 +164,7 @@
     .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
     
     .btn-white {
-      background: #fff; color: #4070f4;
+      background: #fff; color: #2563eb;
       padding: 13px 26px;
       border-radius: 8px;
       font-weight: 700; font-size: 14px;
@@ -203,7 +200,7 @@
     .badge-icon-box {
       width: 140px; height: 140px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #4070f4, #7eb3ff);
+      background: linear-gradient(135deg, #2563eb, #7eb3ff);
       margin: 0 auto 20px;
       display: flex; align-items: center; justify-content: center;
       font-size: 52px; color: #fff;
@@ -248,7 +245,7 @@
       display: flex; align-items: center; gap: 12px; margin-bottom: 38px;
     }
     .section-label span { font-size: 20px; font-weight: 600; color: #0E2431; white-space: nowrap; }
-    .section-label::after { content: ''; flex: 1; height: 2px; background: linear-gradient(to right, #4070f4, transparent); }
+    .section-label::after { content: ''; flex: 1; height: 2px; background: linear-gradient(to right, #2563eb, transparent); }
 
     /* --- SHIFT SECTION (SEO & AEO) --- */
     .shift-section { padding: 80px 0; background: #fff; }
@@ -264,7 +261,7 @@
       font-weight: 800; color: #0E2431;
       line-height: 1.25; margin-bottom: 20px;
     }
-    .shift-text h2 span { color: #4070f4; }
+    .shift-text h2 span { color: #2563eb; }
     .shift-text p {
       color: #555; font-size: 15.5px;
       line-height: 1.8; margin-bottom: 16px;
@@ -275,7 +272,7 @@
     .comp-item {
       display: flex; align-items: flex-start; gap: 12px;
       padding: 12px 16px; border-radius: 10px;
-      background: #f8f9fa; border-left: 4px solid #4070f4;
+      background: #f8f9fa; border-left: 4px solid #2563eb;
     }
     .comp-item.aeo { border-left-color: #8b5cf6; background: #fbfaff; }
     .comp-item h4 { font-size: 14px; font-weight: 700; color: #0E2431; margin-bottom: 2px; }
@@ -322,10 +319,10 @@
     .pillar-card p { color: #555; font-size: 14px; line-height: 1.7; margin-bottom: 18px; }
     .pillar-checklist { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .pillar-checklist li { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #666; font-weight: 500; }
-    .pillar-checklist li i { color: #4070f4; font-size: 11px; }
+    .pillar-checklist li i { color: #2563eb; font-size: 11px; }
 
-    .pillar-card:nth-child(1) { border-bottom-color: #4070f4; }
-    .pillar-card:nth-child(1) .icon { background: linear-gradient(135deg, #0E2431, #4070f4); }
+    .pillar-card:nth-child(1) { border-bottom-color: #2563eb; }
+    .pillar-card:nth-child(1) .icon { background: linear-gradient(135deg, #0E2431, #2563eb); }
     .pillar-card:nth-child(2) { border-bottom-color: #8b5cf6; }
     .pillar-card:nth-child(2) .icon { background: linear-gradient(135deg, #2d1b4e, #8b5cf6); }
     .pillar-card:nth-child(2) .pillar-checklist li i { color: #8b5cf6; }
@@ -350,7 +347,7 @@
       font-weight: 800; color: #0E2431;
       line-height: 1.25; margin-bottom: 20px;
     }
-    .case-text h2 span { color: #4070f4; }
+    .case-text h2 span { color: #2563eb; }
     .case-text p { color: #555; font-size: 15px; line-height: 1.75; margin-bottom: 16px; }
     
     .case-stats-grid {
@@ -359,13 +356,13 @@
     }
     .case-stat-box {
       background: #f8f9fa; border-radius: 12px; padding: 18px 16px;
-      border-top: 3px solid #4070f4;
+      border-top: 3px solid #2563eb;
     }
     .case-stat-box.purple { border-top-color: #8b5cf6; }
     .case-stat-box.green { border-top-color: #10b981; }
     .case-stat-box.gold { border-top-color: #f59e0b; }
     .case-stat-box .metric { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; color: #0E2431; line-height: 1; }
-    .case-stat-box .label { font-size: 11.5px; font-weight: 600; color: #888; text-transform: uppercase; margin-top: 6px; letter-spacing: 0.5px; }
+    .case-stat-box .label { font-size: 11.5px; font-weight: 600; color: #4b5563; text-transform: uppercase; margin-top: 6px; letter-spacing: 0.5px; }
 
     .case-visual-card {
       background: linear-gradient(135deg, #0E2431 0%, #1a3a55 100%);
@@ -398,15 +395,15 @@
       transition: all .35s ease;
       box-shadow: 0 5px 20px rgba(0,0,0,.02);
     }
-    .process-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(64,112,244,.1); border-bottom-color: #4070f4; }
+    .process-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(64,112,244,.1); border-bottom-color: #2563eb; }
     .process-card .step-num {
       font-family: 'Playfair Display', serif;
-      font-size: 42px; font-weight: 800; color: rgba(64,112,244,.12);
+      font-size: 42px; font-weight: 800; color: #2563eb;
       line-height: 1; margin-bottom: 6px;
     }
     .process-card .step-icon {
       width: 52px; height: 52px; border-radius: 14px;
-      background: linear-gradient(135deg, #0E2431, #4070f4);
+      background: linear-gradient(135deg, #0E2431, #2563eb);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px; color: #fff; margin: 0 auto 16px;
     }
@@ -418,7 +415,7 @@
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .faq-item { background: #f8f9fa; border-radius: 14px; overflow: hidden; transition: all 0.3s; }
     .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; cursor: pointer; font-weight: 600; font-size: 15px; color: #0E2431; gap: 12px; }
-    .faq-q i { color: #4070f4; transition: transform .3s; }
+    .faq-q i { color: #2563eb; transition: transform .3s; }
     .faq-a { display: none; padding: 0 24px 20px; color: #555; font-size: 14px; line-height: 1.75; }
     .faq-item.open { background: #fff; box-shadow: 0 5px 20px rgba(64,112,244,.08); }
     .faq-item.open .faq-q i { transform: rotate(180deg); }
@@ -449,7 +446,7 @@
   <!-- Navbar -->
   <nav id="top">
     <div class="navbar">
-      <div class="logo"><a href="/" aria-label="Home">ABIRAL</a></div>
+      <div class="logo"><a href="/">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -475,6 +472,7 @@
     </div>
     <div class="menu-btn"><i class="fas fa-bars" aria-label="Open menu"></i></div>
   </nav>
+  <main id="main">
 
   <!-- Hero Section -->
   <section class="kathmandu-hero">
@@ -535,16 +533,16 @@
           
           <div class="shift-comparison">
             <div class="comp-item">
-              <div class="icon"><i class="fas fa-search" style="color:#4070f4; margin-top:3px;"></i></div>
+              <div class="icon"><i class="fas fa-search" style="color:#2563eb; margin-top:3px;"></i></div>
               <div>
-                <h4>Traditional SEO (Search Engine Optimization)</h4>
+                <h3>Traditional SEO (Search Engine Optimization)</h3>
                 <p>Focuses on indexing, keywords, crawlability, and links to rank your URLs on Google's search result pages.</p>
               </div>
             </div>
             <div class="comp-item aeo">
               <div class="icon"><i class="fas fa-robot" style="color:#8b5cf6; margin-top:3px;"></i></div>
               <div>
-                <h4>Modern AEO / GEO (Answer Engine Optimization)</h4>
+                <h3>Modern AEO / GEO (Answer Engine Optimization)</h3>
                 <p>Focuses on structured entities, schema, direct conversational answers, and semantic authority so AI engines cite your brand.</p>
               </div>
             </div>
@@ -657,7 +655,7 @@
               <div class="label">AI Recommended</div>
             </div>
           </div>
-          <a href="/blogs/darumandu-nepal-night-liquor-delivery-case-study/" target="_blank" class="btn-white" style="border: 2px solid #4070f4; color: #4070f4;"><i class="fas fa-book-open"></i> Read Full Case Study</a>
+          <a href="/blogs/darumandu-nepal-night-liquor-delivery-case-study/" target="_blank" class="btn-white" style="border: 2px solid #2563eb; color: #2563eb;"><i class="fas fa-book-open"></i> Read Full Case Study</a>
         </div>
         
         <!-- Right Visual card -->
@@ -753,8 +751,8 @@
     <div class="content" style="width:90%; max-width:1200px; margin:0 auto; padding-top:40px;">
       <div class="title" style="display:flex; justify-content:center; margin-bottom:15px;">
         <span style="color:#0E2431; font-size:28px; font-weight:600; position:relative; padding-bottom:8px;">Start Your Consultation
-          <span style="position:absolute; height:3px; width:70%; background:#4070f4; bottom:-7px; left:50%; transform:translateX(-50%);"></span>
-          <span style="position:absolute; height:3px; width:100%; background:#4070f4; bottom:0; left:0;"></span>
+          <span style="position:absolute; height:3px; width:70%; background:#2563eb; bottom:-7px; left:50%; transform:translateX(-50%);"></span>
+          <span style="position:absolute; height:3px; width:100%; background:#2563eb; bottom:0; left:0;"></span>
         </span>
       </div>
       <div class="contact-text" style="text-align:center; max-width:700px; margin:0 auto 40px auto; color:#555; font-size:16px;">
@@ -809,7 +807,7 @@
           </div>
           
           <div class="map-card" style="width: 100%; border-radius: 12px; overflow: hidden; height: 200px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
-            <iframe src="https://maps.google.com/maps?q=26.5866101,88.0330847&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://maps.google.com/maps?q=26.5866101,88.0330847&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Abiral Acharya location on Google Maps"></iframe>
           </div>
         </div>
 
@@ -906,16 +904,17 @@
   </section>
 
   <!-- Footer Section -->
+  </main>
   <footer>
     <div class="footer-content">
       <div class="footer-column">
         <h3>Abiral Acharya | SEO Consultant Nepal</h3>
         <p>Helping businesses rank on Google and grow organically from Birtamode, Jhapa, Nepal.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <div class="footer-column">
@@ -1108,5 +1107,6 @@
       }
     });
   </script>
+<!-- fa-font-display-fix --><style id="fa-font-display-fix">@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff) format('woff')}</style>
 </body>
 </html>

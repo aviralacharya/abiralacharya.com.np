@@ -21,14 +21,21 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCs6KVjbNBYlgoKfw72.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCv6KVjbNBYlgoCxCvjsGyN.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></noscript>
   <link rel="stylesheet" href="styles.css?v=4">
 
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; text-decoration:none; }
     :root {
-      --blue: #4070f4;
+      --blue: #2563eb;
       --dark: #0E2431;
       --light-bg: #F0F8FF;
       --muted: #555;
@@ -66,14 +73,14 @@
     .navbar .nav-contact { display:flex; align-items:center; gap:12px; }
     .navbar .nav-phone { display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--blue); white-space:nowrap; }
     nav.sticky .navbar .nav-phone { color:#fff; }
-    .navbar .nav-open { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; color:#16a34a; white-space:nowrap; }
+    .navbar .nav-open { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; color:#15803d; white-space:nowrap; }
     nav.sticky .navbar .nav-open { color:#d1fae5; }
     .navbar .nav-cta { display:inline-flex; align-items:center; background:var(--blue); color:#fff; font-size:13px; font-weight:600; padding:8px 14px; border-radius:30px; white-space:nowrap; transition:all .3s ease; }
     .navbar .nav-cta:hover { transform:translateY(-2px); filter:brightness(1.1); }
     nav.sticky .navbar .nav-cta { background:#fff; color:var(--blue); }
     @media (max-width:1299px) { .navbar .nav-phone, .navbar .nav-open { display:none; } }
     @media (max-width:767px) { .navbar .navbar-right { display:flex; align-items:center; margin-right:48px; } .navbar .nav-cta { font-size:12px; padding:6px 12px; } }
-    nav .menu-btn, .navbar .menu .cancel-btn { position:absolute; color:#fff; right:20px; top:20px; font-size:24px; cursor:pointer; display:none; background:transparent; border:none; z-index:999; }
+    nav .menu-btn, .navbar .menu .cancel-btn { position:absolute; color:#fff; right:20px; top:20px; font-size:24px; cursor:pointer; display:none; background:transparent; border:none; z-index:4b5563; }
     nav .menu-btn { color:var(--blue); }
     nav.sticky .menu-btn { color:#fff; }
     .scroll-button a { position:fixed; bottom:20px; right:20px; color:#fff; background:var(--blue); padding:10px 12px; font-size:18px; border-radius:50%; box-shadow:0 5px 15px rgba(0,0,0,.2); display:none; transition:all .3s ease; z-index:99; }
@@ -82,7 +89,7 @@
     /* ── HERO ── */
     .contact-hero {
       padding:130px 0 80px;
-      background:linear-gradient(135deg,#0E2431 0%,#1a3a55 55%,#4070f4 100%);
+      background:linear-gradient(135deg,#0E2431 0%,#1a3a55 55%,#2563eb 100%);
       position:relative; overflow:hidden;
     }
     .contact-hero::before { content:''; position:absolute; width:600px; height:600px; border-radius:50%; background:rgba(64,112,244,.12); top:-200px; right:-150px; }
@@ -125,7 +132,7 @@
     .cd-icon { width:40px; height:40px; border-radius:10px; background:rgba(64,112,244,.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
     .cd-icon i { color:var(--blue); font-size:15px; }
     .cd-body { display:flex; flex-direction:column; }
-    .cd-label { font-size:11px; color:#aaa; font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+    .cd-label { font-size:11px; color:#4b5563; font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
     .cd-val { font-size:14px; color:var(--dark); font-weight:600; margin-top:1px; }
     .cd-val a { color:var(--dark); transition:color .3s; }
     .cd-val a:hover { color:var(--blue); }
@@ -133,28 +140,28 @@
     /* Social links */
     .social-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
     .soc-btn { display:flex; align-items:center; gap:7px; padding:8px 14px; border-radius:8px; font-size:13px; font-weight:600; transition:all .3s; border:2px solid; }
-    .soc-btn.fb  { border-color:#1877f2; color:#1877f2; }
-    .soc-btn.fb:hover  { background:#1877f2; color:#fff; }
-    .soc-btn.tw  { border-color:#1da1f2; color:#1da1f2; }
-    .soc-btn.tw:hover  { background:#1da1f2; color:#fff; }
+    .soc-btn.fb  { border-color:#0e63c4; color:#0e63c4; }
+    .soc-btn.fb:hover  { background:#0e63c4; color:#fff; }
+    .soc-btn.tw  { border-color:#0874b7; color:#0874b7; }
+    .soc-btn.tw:hover  { background:#0874b7; color:#fff; }
     .soc-btn.li  { border-color:#0a66c2; color:#0a66c2; }
     .soc-btn.li:hover  { background:#0a66c2; color:#fff; }
-    .soc-btn.ig  { border-color:#e4405f; color:#e4405f; }
-    .soc-btn.ig:hover  { background:#e4405f; color:#fff; }
+    .soc-btn.ig  { border-color:#c22a49; color:#c22a49; }
+    .soc-btn.ig:hover  { background:#c22a49; color:#fff; }
 
     /* Availability badge */
     .avail-badge { display:flex; align-items:center; gap:10px; background:rgba(16,185,129,.08); border:1px solid rgba(16,185,129,.25); border-radius:10px; padding:12px 16px; margin-top:4px; }
     .avail-dot { width:10px; height:10px; border-radius:50%; background:#10b981; flex-shrink:0; animation:pulse 2s infinite; }
     @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.4);} 50%{box-shadow:0 0 0 6px rgba(16,185,129,0);} }
-    .avail-text { font-size:13px; font-weight:600; color:#059669; }
+    .avail-text { font-size:13px; font-weight:600; color:#047857; }
     .avail-text span { display:block; font-size:11px; font-weight:400; color:#6b7280; margin-top:1px; }
 
     /* WhatsApp CTA card */
-    .wa-card { background:linear-gradient(135deg,#25d366,#128c7e); border-radius:18px; padding:26px; text-align:center; }
+    .wa-card { background:linear-gradient(135deg,#0f766e,#0f766e); border-radius:18px; padding:26px; text-align:center; }
     .wa-card i { font-size:38px; color:#fff; margin-bottom:10px; }
     .wa-card h4 { font-size:16px; font-weight:700; color:#fff; margin-bottom:6px; }
     .wa-card p { font-size:13px; color:rgba(255,255,255,.85); margin-bottom:18px; line-height:1.5; }
-    .wa-btn { display:inline-flex; align-items:center; gap:8px; background:#fff; color:#128c7e; padding:12px 24px; border-radius:8px; font-weight:700; font-size:14px; transition:all .3s; }
+    .wa-btn { display:inline-flex; align-items:center; gap:8px; background:#fff; color:#0f766e; padding:12px 24px; border-radius:8px; font-weight:700; font-size:14px; transition:all .3s; }
     .wa-btn:hover { background:#f0fff8; transform:translateY(-2px); }
 
     /* ── RIGHT: FORM ── */
@@ -214,7 +221,7 @@
     .form-group select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23555' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:36px; cursor:pointer; }
 
     /* Character counter */
-    .char-count { font-size:11px; color:#aaa; text-align:right; margin-top:2px; }
+    .char-count { font-size:11px; color:#4b5563; text-align:right; margin-top:2px; }
 
     /* Consent */
     .consent-row { display:flex; align-items:flex-start; gap:10px; margin-bottom:24px; }
@@ -247,7 +254,7 @@
     /* Success / Error banners */
     .form-banner { display:none; border-radius:10px; padding:16px 20px; margin-bottom:20px; font-size:14px; font-weight:500; align-items:center; gap:12px; }
     .form-banner i { font-size:20px; flex-shrink:0; }
-    .form-banner.success { background:rgba(16,185,129,.1); border:1px solid rgba(16,185,129,.3); color:#059669; }
+    .form-banner.success { background:rgba(16,185,129,.1); border:1px solid rgba(16,185,129,.3); color:#047857; }
     .form-banner.error-b { background:rgba(233,69,96,.08); border:1px solid rgba(233,69,96,.25); color:#c0303d; }
     .form-banner.show { display:flex; }
 
@@ -290,8 +297,8 @@
     .reach-card { background:#fff; border-radius:16px; padding:28px 24px; box-shadow:var(--card-shadow); text-align:center; transition:all .35s; }
     .reach-card:hover { transform:translateY(-5px); box-shadow:var(--card-hover); }
     .reach-card .rc-icon { width:58px; height:58px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:24px; color:#fff; margin:0 auto 16px; }
-    .reach-card:nth-child(1) .rc-icon { background:linear-gradient(135deg,#25d366,#128c7e); }
-    .reach-card:nth-child(2) .rc-icon { background:linear-gradient(135deg,#0E2431,#4070f4); }
+    .reach-card:nth-child(1) .rc-icon { background:linear-gradient(135deg,#0f766e,#0f766e); }
+    .reach-card:nth-child(2) .rc-icon { background:linear-gradient(135deg,#0E2431,#2563eb); }
     .reach-card:nth-child(3) .rc-icon { background:linear-gradient(135deg,#3b1f0d,#f59e0b); }
     .reach-card h4 { font-size:16px; font-weight:700; color:var(--dark); margin-bottom:8px; }
     .reach-card p { font-size:13px; color:var(--muted); line-height:1.6; margin-bottom:16px; }
@@ -304,7 +311,7 @@
     .section-label::after { content:''; flex:1; height:2px; background:linear-gradient(to right,var(--blue),transparent); }
 
     /* ── CTA BANNER ── */
-    .cta-banner { background:linear-gradient(135deg,#0E2431 0%,#4070f4 100%); padding:60px 0; }
+    .cta-banner { background:linear-gradient(135deg,#0E2431 0%,#2563eb 100%); padding:60px 0; }
     .cta-inner { width:90%; max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; }
     .cta-text h2 { font-family:'Playfair Display',serif; font-size:clamp(22px,3vw,34px); color:#fff; margin-bottom:10px; }
     .cta-text p { color:rgba(255,255,255,.8); font-size:15px; max-width:500px; }
@@ -324,7 +331,7 @@
     .footer-column ul li a { color:#ddd; font-size:.9rem; display:block; transition:color .3s; }
     .footer-column ul li a:hover { color:#3498db; }
     .social-links { display:flex; gap:.8rem; margin-top:.8rem; }
-    .social-links a { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; background:rgba(255,255,255,.1); border-radius:50%; color:white; transition:all .3s; font-size:.9rem; }
+    .social-links a { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; background:rgba(255,255,255,.1); border-radius:50%; color:white; transition:all .3s; font-size:.9rem; }
     .social-links a:hover { background:#3498db; transform:translateY(-3px); }
     .copyright { text-align:center; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.1); font-size:.85rem; color:#ccc; margin-top:2rem; }
 
@@ -366,7 +373,7 @@
   <!-- ══ NAV ══ -->
   <nav id="top">
     <div class="navbar">
-      <div class="logo"><a href="/" aria-label="Home">ABIRAL</a></div>
+      <div class="logo"><a href="/">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -383,15 +390,16 @@
           <a href="/contact" class="nav-cta">Free Site Review</a>
         </div>
         <div class="media-icons">
-        <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
     <div class="menu-btn"><i class="fas fa-bars" aria-label="Open menu"></i></div>
   </nav>
+  <main id="main">
 
   <!-- ══════════════════════════════════
        HERO
@@ -488,7 +496,7 @@
           <!-- WhatsApp CTA -->
           <div class="wa-card">
             <i class="fab fa-whatsapp"></i>
-            <h4>Prefer a Quick Chat?</h4>
+            <h3>Prefer a Quick Chat?</h3>
             <p>WhatsApp is the fastest way to reach me. Most messages get a reply within an hour.</p>
             <a href="https://wa.me/9779824055745?text=Hi%20Abiral%2C%20I%20found%20you%20via%20your%20website%20and%20I%27d%20love%20to%20discuss%20SEO%20for%20my%20business." target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
           </div>
@@ -647,7 +655,7 @@
 
         <!-- Overlay info card -->
         <div class="map-info-card">
-          <h4><i class="fas fa-map-marker-alt"></i> Abiral Acharya</h4>
+          <h3><i class="fas fa-map-marker-alt"></i> Abiral Acharya</h3>
           <p>SEO Consultant<br>Birtamode, Jhapa<br>Province No. 1, Nepal</p>
           <a href="https://maps.google.com/?q=26.5866101,88.0330847" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-directions"></i> Get Directions
@@ -666,19 +674,19 @@
       <div class="reach-grid">
         <div class="reach-card">
           <div class="rc-icon"><i class="fab fa-whatsapp"></i></div>
-          <h4>WhatsApp</h4>
+          <h3>WhatsApp</h3>
           <p>The fastest way to reach me. Send a message any time and I'll typically reply within an hour during the day.</p>
           <a href="https://wa.me/9779824055745?text=Hi%20Abiral%2C%20I%27d%20like%20to%20discuss%20SEO%20for%20my%20business." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Start Chat</a>
         </div>
         <div class="reach-card">
           <div class="rc-icon"><i class="fas fa-envelope"></i></div>
-          <h4>Email</h4>
+          <h3>Email</h3>
           <p>For detailed enquiries, proposals, or to send supporting documents. I reply to all emails within 24 hours.</p>
           <a href="mailto:contact@aviralacharya.com.np"><i class="fas fa-envelope"></i> Send Email</a>
         </div>
         <div class="reach-card">
           <div class="rc-icon"><i class="fas fa-calendar-alt"></i></div>
-          <h4>Free Discovery Call</h4>
+          <h3>Free Discovery Call</h3>
           <p>Want to talk through your SEO goals before committing? Book a free 30-minute call — no obligation, just honest advice.</p>
           <a href="https://wa.me/9779824055745?text=Hi%20Abiral%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call." target="_blank" rel="noopener"><i class="fas fa-phone-alt"></i> Book a Call</a>
         </div>
@@ -701,16 +709,17 @@
   </div>
 
   <!-- ══ FOOTER ══ -->
+  </main>
   <footer>
     <div class="footer-content">
       <div class="footer-column">
         <h3>Abiral Acharya | SEO Consultant Nepal</h3>
         <p>Helping businesses rank on Google and grow organically from Birtamode, Jhapa, Nepal.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <div class="footer-column">
@@ -852,5 +861,6 @@
     });
 
   </script>
+<!-- fa-font-display-fix --><style id="fa-font-display-fix">@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff) format('woff')}</style>
 </body>
 </html>

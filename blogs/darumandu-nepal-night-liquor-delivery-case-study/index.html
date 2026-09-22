@@ -17,8 +17,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCs6KVjbNBYlgoKfw72.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCv6KVjbNBYlgoCxCvjsGyN.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></noscript>
 
   <script type="application/ld+json">
   {
@@ -61,8 +67,8 @@
       margin: 0 0 32px;
     }
     .cs-stat-card { background: #fff; padding: 16px 10px; text-align: center; }
-    .cs-stat-num  { font-size: 1.7rem; font-weight: 700; color: #4070f4; line-height: 1; margin-bottom: 5px; font-family: "Ubuntu", sans-serif; }
-    .cs-stat-label{ font-size: 0.65rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; line-height: 1.3; }
+    .cs-stat-num  { font-size: 1.7rem; font-weight: 700; color: #2563eb; line-height: 1; margin-bottom: 5px; font-family: "Ubuntu", sans-serif; }
+    .cs-stat-label{ font-size: 0.65rem; color: #4b5563; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; line-height: 1.3; }
 
     /* ═══════════════════════════════════════════
        SCREENSHOT PLACEHOLDER
@@ -83,15 +89,15 @@
       color: #7a90d4;
     }
     .screenshot-placeholder .ph-icon  { font-size: 2rem; opacity: .5; }
-    .screenshot-placeholder .ph-title { font-size: .88rem; font-weight: 700; color: #4070f4; margin-bottom: 2px; }
-    .screenshot-placeholder .ph-note  { font-size: .73rem; color: #a0aec0; font-style: italic; }
-    .screenshot-placeholder small      { font-size: .73rem; color: #999; }
-    .screenshot-placeholder code       { font-size: .73rem; background: #e8edf5; padding: 1px 6px; border-radius: 3px; color: #4070f4; }
+    .screenshot-placeholder .ph-title { font-size: .88rem; font-weight: 700; color: #2563eb; margin-bottom: 2px; }
+    .screenshot-placeholder .ph-note  { font-size: .73rem; color: #4b5563; font-style: italic; }
+    .screenshot-placeholder small      { font-size: .73rem; color: #4b5563; }
+    .screenshot-placeholder code       { font-size: .73rem; background: #e8edf5; padding: 1px 6px; border-radius: 3px; color: #1d4ed8; }
 
     /* post-img wrapper — keeps caption below */
     .post-img { width: 100%; margin: 26px 0 0; border-radius: 11px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.09); }
     .post-img figcaption {
-      font-size: .76rem; color: #888; text-align: center;
+      font-size: .76rem; color: #4b5563; text-align: center;
       padding: 7px 14px 6px; font-style: italic; line-height: 1.45;
       background: #f8f9fa; border-radius: 0 0 11px 11px; margin-bottom: 26px;
     }
@@ -108,8 +114,8 @@
       box-shadow: 0 6px 24px rgba(0,0,0,.06);
     }
     .post-featured-placeholder .ph-icon  { font-size: 2.6rem; opacity: .45; }
-    .post-featured-placeholder .ph-title { font-size: .95rem; font-weight: 700; color: #4070f4; }
-    .post-featured-placeholder .ph-sub   { font-size: .78rem; color: #888; font-style: italic; max-width: 380px; line-height: 1.55; }
+    .post-featured-placeholder .ph-title { font-size: .95rem; font-weight: 700; color: #2563eb; }
+    .post-featured-placeholder .ph-sub   { font-size: .78rem; color: #4b5563; font-style: italic; max-width: 380px; line-height: 1.55; }
 
     /* ═══════════════════════════════════════════
        KEYWORD CLUSTER TAGS
@@ -119,7 +125,7 @@
       background: #eef2ff; color: #3a56cc; font-size: .73rem;
       font-weight: 600; padding: 4px 11px; border-radius: 20px;
     }
-    .keyword-cluster span.transact { background: #fff3e0; color: #e65100; }
+    .keyword-cluster span.transact { background: #fff3e0; color: #9a3412; }
     .keyword-cluster span.info-kw  { background: #e8f5e9; color: #2e7d32; }
     .keyword-cluster span.brand    { background: #f3e8ff; color: #6d28d9; }
 
@@ -156,9 +162,9 @@
     }
     .milestone-card.achieved   { background: linear-gradient(135deg,#e8f5e9,#c8e6c9); border-color: #66bb6a; }
     .milestone-card.inprogress { background: linear-gradient(135deg,#e3f2fd,#bbdefb); border-color: #64b5f6; border-style: dashed; }
-    .milestone-num   { font-size: 1.55rem; font-weight: 700; color: #e65100; font-family: "Ubuntu",sans-serif; line-height: 1; margin-bottom: 4px; }
+    .milestone-num   { font-size: 1.55rem; font-weight: 700; color: #9a3412; font-family: "Ubuntu",sans-serif; line-height: 1; margin-bottom: 4px; }
     .milestone-label { font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 7px; color: #bf360c; }
-    .milestone-date  { font-size: .7rem; color: #888; font-style: italic; }
+    .milestone-date  { font-size: .7rem; color: #4b5563; font-style: italic; }
     .milestone-card.achieved   .milestone-num   { color: #2e7d32; }
     .milestone-card.achieved   .milestone-label { color: #1b5e20; }
     .milestone-card.inprogress .milestone-num   { color: #1565c0; }
@@ -175,13 +181,13 @@
     }
     .compare-side { padding: 16px 18px; background: #fff; }
     .compare-side.winner { background: #f0fdf4; }
-    .compare-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: #888; margin-bottom: 9px; }
-    .compare-side.winner .compare-label { color: #16a34a; }
+    .compare-label { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: #4b5563; margin-bottom: 9px; }
+    .compare-side.winner .compare-label { color: #15803d; }
     .compare-item { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
     .compare-item:last-child { border-bottom: none; }
     .compare-item .metric { color: #666; }
     .compare-item .val { font-weight: 700; color: #0E2431; font-family: "Ubuntu",sans-serif; }
-    .compare-side.winner .compare-item .val { color: #16a34a; }
+    .compare-side.winner .compare-item .val { color: #15803d; }
 
     /* ═══════════════════════════════════════════
        FIX LOG TABLE
@@ -204,7 +210,7 @@
     .result-table tr:hover { background: #f5f7ff; }
     .result-table td { padding: 7px 11px; }
     .result-table td:first-child { color: #555; font-weight: 500; }
-    .result-table td:last-child { color: #4070f4; font-weight: 700; text-align: right; font-family: "Ubuntu",sans-serif; }
+    .result-table td:last-child { color: #2563eb; font-weight: 700; text-align: right; font-family: "Ubuntu",sans-serif; }
     .result-table .table-header td { background: #0E2431; color: #fff; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
     .result-table .table-header td:last-child { color: #6e93f7; }
 
@@ -233,7 +239,7 @@
     .roadmap-list { list-style: none; padding: 0; margin: 10px 0; }
     .roadmap-list li { display: flex; gap: 11px; padding: 9px 0; border-bottom: 1px solid #f0f0f0; font-size: 14.5px; color: #444; align-items: flex-start; }
     .roadmap-list li:last-child { border-bottom: none; }
-    .roadmap-list .ricon { width: 24px; height: 24px; border-radius: 50%; background: #eef2ff; color: #4070f4; font-size: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .roadmap-list .ricon { width: 24px; height: 24px; border-radius: 50%; background: #eef2ff; color: #2563eb; font-size: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 
     /* ═══════════════════════════════════════════
        RESPONSIVE
@@ -274,7 +280,7 @@
   <!-- NAV -->
   <nav id="top">
     <div class="navbar">
-      <div class="logo"><a href="/" aria-label="Home">ABIRAL</a></div>
+      <div class="logo"><a href="/">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -300,6 +306,7 @@
     </div>
     <div class="menu-btn"><i class="fas fa-bars" aria-label="Open menu"></i></div>
   </nav>
+  <main id="main">
 
   <!-- HERO -->
   <div class="post-hero">
@@ -346,7 +353,7 @@
 
       <!-- TOC -->
       <div class="toc">
-        <h3><i class="fas fa-list"></i> Table of Contents</h3>
+        <h2><i class="fas fa-list"></i> Table of Contents</h2>
         <ol>
           <li><a href="#about-project">Project Background &mdash; What is Darumandu?</a></li>
           <li><a href="#keyword-clusters">Keyword Clustering &amp; Search Intent Mapping</a></li>
@@ -702,7 +709,7 @@
 
       <!-- AUTHOR BOX -->
       <div class="author-box">
-        <div class="author-avatar"><img src="/assets/person/abiral-acharya-seo-expert-nepal.webp" alt="Abiral Acharya" loading="lazy"></div>
+        <div class="author-avatar"><img src="/assets/person/abiral-acharya-avatar.webp" width="80" height="80" alt="Abiral Acharya" loading="lazy"></div>
         <div class="author-info">
           <h3>Abiral Acharya</h3>
           <div class="role">SEO Expert &amp; Web Developer | Nepal</div>
@@ -802,7 +809,7 @@
       <h2>Related Posts</h2>
       <div class="related-grid">
         <div class="related-card">
-          <div class="related-card-img" style="background:linear-gradient(135deg,#0E2431,#4070f4);">🔧</div>
+          <div class="related-card-img" style="background:linear-gradient(135deg,#0E2431,#2563eb);">🔧</div>
           <div class="related-card-body">
             <div class="cat">SEO Tools</div>
             <h3><a href="/blogs/free-seo-optimization-tools/">7 Free SEO Tools I Use Every Day as an SEO Consultant in Nepal</a></h3>
@@ -827,16 +834,17 @@
   </div>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <div class="footer-content">
       <div class="footer-column">
         <h3>Abiral Acharya | SEO Consultant Nepal</h3>
         <p>Helping businesses rank on Google and grow organically from Birtamode, Jhapa, Nepal.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <div class="footer-column">
@@ -911,5 +919,6 @@
     function shareLi() { window.open('https://www.linkedin.com/sharing/share-offsite/?url='+url,'_blank'); }
 
   </script>
+<!-- fa-font-display-fix --><style id="fa-font-display-fix">@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff) format('woff')}</style>
 </body>
 </html>

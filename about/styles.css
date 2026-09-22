@@ -22,7 +22,7 @@
       transition: all 0.3s ease;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #4070f4;
+      background: #2563eb;
     }
 
     /* Navigation */
@@ -37,7 +37,7 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     nav.sticky {
-      background: #4070f4;
+      background: #2563eb;
       padding: 10px 0;
     }
     nav .navbar {
@@ -51,7 +51,7 @@
     nav .navbar .logo a {
       font-weight: 600;
       font-size: 28px;
-      color: #4070f4;
+      color: #2563eb;
     }
     nav.sticky .navbar .logo a {
       color: #fff;
@@ -73,14 +73,14 @@
       position: relative;
     }
     .navbar .menu a:hover {
-      color: #4070f4;
+      color: #2563eb;
     }
     .navbar .menu a::after {
       content: '';
       position: absolute;
       width: 0;
       height: 2px;
-      background: #4070f4;
+      background: #2563eb;
       bottom: 0;
       left: 0;
       transition: width 0.3s ease;
@@ -95,7 +95,7 @@
       color: #0E2431;
     }
     .navbar .menu a.active {
-      color: #4070f4;
+      color: #2563eb;
     }
     nav.sticky .menu a.active,
     nav.sticky .menu a.active:hover {
@@ -106,7 +106,7 @@
       align-items: center;
     }
     .navbar .media-icons a {
-      color: #4070f4;
+      color: #2563eb;
       font-size: 18px;
       margin: 0 6px;
       transition: transform 0.3s ease;
@@ -131,10 +131,10 @@
       display: none;
       background: transparent;
       border: none;
-      z-index: 999;
+      z-index: 4b5563;
     }
     nav .menu-btn {
-      color: #4070f4;
+      color: #2563eb;
     }
     nav.sticky .menu-btn {
       color: #FFF;
@@ -193,7 +193,7 @@
     .home .text-three {
       font-size: clamp(20px, 5vw, 35px);
       margin: 10px 0;
-      color: #4070f4;
+      color: #2563eb;
       font-weight: 600;
     }
     .home .text-four {
@@ -214,7 +214,7 @@
       border-radius: 6px;
       font-size: 16px;
       font-weight: 500;
-      background: #4070f4;
+      background: #2563eb;
       color: #fff;
       cursor: pointer;
       border: 2px solid transparent;
@@ -222,9 +222,9 @@
       min-width: 140px;
     }
     .home .button button:hover {
-      border-color: #4070f4;
+      border-color: #2563eb;
       background-color: #fff;
-      color: #4070f4;
+      color: #2563eb;
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(64, 112, 244, 0.3);
     }
@@ -264,7 +264,7 @@
       position: absolute;
       height: 3px;
       width: 100%;
-      background: #4070f4;
+      background: #2563eb;
       left: 0;
       bottom: 0;
     }
@@ -319,16 +319,16 @@
       border-radius: 6px;
       font-size: 16px;
       font-weight: 500;
-      background: #4070f4;
+      background: #2563eb;
       color: #fff;
       border: 2px solid transparent;
       cursor: pointer;
       transition: all 0.4s ease;
     }
     section .button button:hover {
-      border-color: #4070f4;
+      border-color: #2563eb;
       background-color: #fff;
-      color: #4070f4;
+      color: #2563eb;
     }
 
     /* Skills Section */
@@ -385,7 +385,7 @@
     }
     .skills-details .boxes .topic {
       font-size: 18px;
-      color: #4070f4;
+      color: #2563eb;
       margin-bottom: 10px;
     }
     .skills-details .boxes .per {
@@ -409,7 +409,7 @@
       left: 0;
       height: 100%;
       width: calc(var(--percentage) * 1%);
-      background: #4070f4;
+      background: #2563eb;
       border-radius: 4px;
       transition: width 1s ease-out;
     }
@@ -447,7 +447,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #4070f4;
+      background: #2563eb;
       z-index: -1;
       transform: scaleY(0);
       transform-origin: bottom;
@@ -459,7 +459,7 @@
     .services .boxes .box .icon {
       height: 60px;
       width: 60px;
-      background: #4070f4;
+      background: #2563eb;
       border-radius: 50%;
       text-align: center;
       line-height: 60px;
@@ -472,8 +472,8 @@
     }
     .services .boxes .box:hover .icon {
       background-color: #fff;
-      color: #4070f4;
-      border: 2px solid #4070f4;
+      color: #2563eb;
+      border: 2px solid #2563eb;
     }
     .services .boxes .box .topic {
       font-size: 20px;
@@ -542,7 +542,7 @@
       font-size: 16px;
     }
     .contact-item i {
-      color: #4070f4;
+      color: #2563eb;
       font-size: 18px;
     }
     .contact .button {
@@ -555,7 +555,7 @@
       bottom: 20px;
       right: 20px;
       color: #fff;
-      background: #4070f4;
+      background: #2563eb;
       padding: 10px 12px;
       font-size: 18px;
       border-radius: 50%;
@@ -686,7 +686,7 @@
         color: #fff;
       }
       nav.sticky .menu a:hover {
-        color: #4070f4;
+        color: #2563eb;
       }
       nav .navbar .media-icons {
         display: none;
@@ -750,7 +750,7 @@
     .keyboard-nav .button button:focus,
     .keyboard-nav .media-icons a:focus,
     .keyboard-nav .scroll-button a:focus {
-      outline: 2px solid #4070f4;
+      outline: 2px solid #2563eb;
       outline-offset: 2px;
     }
 
@@ -792,7 +792,7 @@
         left: 0;
         width: 40px;
         height: 2px;
-        background: #4070f4;
+        background: #2563eb;
     }
 
     .footer-column p {
@@ -835,8 +835,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
+        width:44px; height:44px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         color: white;
@@ -913,7 +912,7 @@
         gap: 6px;
         font-size: 14px;
         font-weight: 600;
-        color: #4070f4;
+        color: #2563eb;
         white-space: nowrap;
     }
     nav.sticky .navbar .nav-phone {
@@ -925,7 +924,7 @@
         gap: 5px;
         font-size: 12px;
         font-weight: 600;
-        color: #16a34a;
+        color: #15803d;
         white-space: nowrap;
     }
     nav.sticky .navbar .nav-open {
@@ -934,7 +933,7 @@
     .navbar .nav-cta {
         display: inline-flex;
         align-items: center;
-        background: #4070f4;
+        background: #2563eb;
         color: #fff;
         font-size: 13px;
         font-weight: 600;
@@ -949,10 +948,10 @@
     }
     nav.sticky .navbar .nav-cta {
         background: #fff;
-        color: #4070f4;
+        color: #2563eb;
     }
     .keyboard-nav .navbar .nav-contact a:focus {
-        outline: 2px solid #4070f4;
+        outline: 2px solid #2563eb;
         outline-offset: 2px;
     }
 

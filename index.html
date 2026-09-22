@@ -25,15 +25,7 @@
   <meta name="author" content="Abiral Acharya">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script>
-    window.addEventListener('load', () => {
-      const s = document.createElement('script');
-      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8719236609788400";
-      s.async = true;
-      s.crossOrigin = "anonymous";
-      document.body.appendChild(s);
-    });
-  </script>
+  
 
 
   <meta property="og:type" content="website">
@@ -60,7 +52,21 @@
   <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style"
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCs6KVjbNBYlgoKfw72.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/ubuntu/v21/4iCv6KVjbNBYlgoCxCvjsGyN.woff2" as="font"
+    type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font"
+    type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font"
+    type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap"
+    as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap">
+  </noscript>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" as="style"
     onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -115,7 +121,7 @@
   <!-- navigation menu -->
   <nav>
     <div class="navbar">
-      <div class="logo"><a href="#home" aria-label="Home">ABIRAL</a></div>
+      <div class="logo"><a href="#home">ABIRAL</a></div>
       <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -149,6 +155,7 @@
       <i class="fas fa-bars" aria-label="Open menu"></i>
     </div>
   </nav>
+  <main id="main">
 
   <!-- Home Section Start -->
   <section class="home" id="home">
@@ -160,9 +167,9 @@
         </div>
         <div class="text-four">I help businesses improve organic visibility, search performance, and qualified traffic through practical, data-driven SEO.</div>
         <div class="button">
-          <button><a href="/contact">Get free audit</a></button>
-          <button><a href="/services">Explore Services</a></button>
-          <button><a href="/blogs" target="_blank">View Blogs</a></button>
+          <a href="/contact" class="btn-solid">Get free audit</a>
+          <a href="/services" class="btn-solid">Explore Services</a>
+          <a href="/blogs" target="_blank" class="btn-solid">View Blogs</a>
 
         </div>
       </div>
@@ -187,11 +194,11 @@
   <section class="about" id="about">
     <div class="content">
       <div class="title"><span>
-          <h4>Abiral Acharya | SEO expert from Nepal</h4>
+          <h2>Abiral Acharya | SEO expert from Nepal</h2>
         </span></div>
       <div class="about-details">
         <div class="left">
-          <img src="/assets/person/abiral-acharya-seo-expert-nepal.webp" width="480" height="520" loading="lazy"
+          <img src="/assets/person/abiral-acharya-seo-expert-nepal.webp" width="600" height="650" loading="lazy"
             alt="SEO expert in Nepal Abiral Acharya">
 
         </div>
@@ -212,9 +219,8 @@
             visibility, and create sustainable online growth.
           </p>
           <div class="button">
-            <a href="/assets/person/SEO expert Nepal Abiral Acharya SEO Expert Birtamode.pdf" download>
-              <button>Download CV</button>
-            </a>
+            <a href="/assets/person/SEO expert Nepal Abiral Acharya SEO Expert Birtamode.pdf" download
+              class="btn-solid">Download CV</a>
           </div>
         </div>
       </div>
@@ -229,25 +235,25 @@
         <div class="client-logos">
           <!-- Original Set -->
           <div class="logo-set">
-            <div class="logo-box"><img src="/assets/company/adventure.svg" alt="Adventure Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/darumandu.png" alt="Darumandu Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/himalayan.png" alt="Himalayan Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/kharaayo.jpg" alt="Kharaayo Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/prime.png" alt="Prime Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/treez.jpg" alt="Treez Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/pooja.png" alt="Pooja Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/Mbeya-Antenna.png" alt="Mbeya Antenna Logo" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/adventure.svg" alt="Adventure Logo" width="120" height="120" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/darumandu.webp" alt="Darumandu Logo" width="200" height="71" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/himalayan.webp" alt="Himalayan Logo" width="200" height="111" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/kharaayo.webp" alt="Kharaayo Logo" width="200" height="200" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/prime.webp" alt="Prime Logo" width="200" height="54" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/treez.webp" alt="Treez Logo" width="200" height="200" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/pooja.webp" alt="Pooja Logo" width="200" height="200" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/Mbeya-Antenna.webp" alt="Mbeya Antenna Logo" width="200" height="104" loading="lazy"></div>
           </div>
           <!-- Duplicated Set for Infinite Scroll -->
           <div class="logo-set" aria-hidden="true">
-            <div class="logo-box"><img src="/assets/company/adventure.svg" alt="Adventure Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/darumandu.png" alt="Darumandu Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/himalayan.png" alt="Himalayan Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/kharaayo.jpg" alt="Kharaayo Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/prime.png" alt="Prime Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/treez.jpg" alt="Treez Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/pooja.png" alt="Pooja Logo" loading="lazy"></div>
-            <div class="logo-box"><img src="/assets/company/Mbeya-Antenna.png" alt="Mbeya Antenna Logo" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/adventure.svg" alt="Adventure Logo" width="120" height="120" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/darumandu.webp" alt="Darumandu Logo" width="200" height="71" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/himalayan.webp" alt="Himalayan Logo" width="200" height="111" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/kharaayo.webp" alt="Kharaayo Logo" width="200" height="200" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/prime.webp" alt="Prime Logo" width="200" height="54" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/treez.webp" alt="Treez Logo" width="200" height="200" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/pooja.webp" alt="Pooja Logo" width="200" height="200" loading="lazy"></div>
+            <div class="logo-box"><img src="/assets/company/Mbeya-Antenna.webp" alt="Mbeya Antenna Logo" width="200" height="104" loading="lazy"></div>
           </div>
         </div>
       </div>
@@ -264,7 +270,7 @@
           <p>Leading organic growth and digital strategy at</p>
         </div>
         <div class="role-logo">
-          <img src="/assets/company/greenhub.png" alt="Greenhub Digital Logo" loading="lazy">
+          <img src="/assets/company/greenhub.webp" alt="Greenhub Digital Logo" width="200" height="60" loading="lazy">
         </div>
       </div>
     </div>
@@ -425,8 +431,8 @@
       <div class="title" style="display:flex; justify-content:center; margin-bottom:15px;">
         <span style="color:#0E2431; font-size:28px; font-weight:600; position:relative; padding-bottom:8px;">Contact Abiral Acharya | SEO Consultant
           <span
-            style="position:absolute; height:3px; width:70%; background:#4070f4; bottom:-7px; left:50%; transform:translateX(-50%);"></span>
-          <span style="position:absolute; height:3px; width:100%; background:#4070f4; bottom:0; left:0;"></span>
+            style="position:absolute; height:3px; width:70%; background:#2563eb; bottom:-7px; left:50%; transform:translateX(-50%);"></span>
+          <span style="position:absolute; height:3px; width:100%; background:#2563eb; bottom:0; left:0;"></span>
         </span>
       </div>
       <div class="contact-text"
@@ -506,7 +512,7 @@
             style="width: 100%; border-radius: 12px; overflow: hidden; height: 200px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
             <iframe src="https://maps.google.com/maps?q=26.5866101,88.0330847&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerpolicy="no-referrer-when-downgrade" title="Abiral Acharya location on Google Maps"></iframe>
           </div>
 
         </div><!-- /info-panel -->
@@ -641,19 +647,20 @@
   </section>
   <!-- Contact Me Section End -->
   <!-- Footer Section Start -->
+  </main>
   <footer>
     <div class="footer-content">
       <div class="footer-column">
         <h3>Abiral Acharya | SEO Consultant Nepal</h3>
         <p>Helping businesses rank on Google and grow organically from Birtamode, Jhapa, Nepal.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer"><i
+          <a href="https://www.facebook.com/abiralacharya2003" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
               class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer"><i
+          <a href="https://x.com/abiralacharya80" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i
               class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i
+          <a href="https://www.instagram.com/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
               class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer"><i
+          <a href="https://www.linkedin.com/in/abiralacharya2003/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
               class="fab fa-linkedin"></i></a>
         </div>
       </div>
@@ -907,6 +914,7 @@
 
   </script>
 
+<!-- fa-font-display-fix --><style id="fa-font-display-fix">@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-solid-900.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-regular-400.woff) format('woff')}@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff2) format('woff2'),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/webfonts/fa-brands-400.woff) format('woff')}</style>
 </body>
 
 </html>

@@ -293,11 +293,12 @@
     nav.sticky .navbar .nav-cta { background:#fff; color:var(--blue); }
     @media (max-width:1299px) { .navbar .nav-phone, .navbar .nav-open { display:none; } }
     @media (max-width:767px) { .navbar .navbar-right { display:flex; align-items:center; margin-right:48px; } .navbar .nav-cta { font-size:12px; padding:6px 12px; } }
-    .breadcrumb { color:#374151; }
-    .breadcrumb a { color:#1d4ed8; text-decoration:underline; }
-    .breadcrumb a:hover { color:#1e40af; }
     .post-content p a { display:inline-block; margin: 0 6px; }
 
-    .breadcrumb span { color:#374151; }
 
     .post-featured-img img, .post-img img { height: auto; }
+
+    .post-hero .breadcrumb, .post-hero .breadcrumb span { color:#f1f5f9; }
+    .post-hero .breadcrumb a { color:#f1f5f9; text-decoration:underline; }
+    .post-hero .breadcrumb a:hover { color:#fff; }
+    .post-content p a { display:inline-block; margin: 0 6px; }
